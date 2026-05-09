@@ -1,0 +1,10 @@
+{
+  "page.title": "My Website",
+  "nav.home": "Home",
+  "hero.title": "Welcome",
+  "hero.subtitle": "A short description of what this site is about.",
+  "hero.cta": "Get Started",
+  "section.title": "About",
+  "section.body": "Add your content here.",
+  "footer.tagline": "Tagline goes here."
+}
