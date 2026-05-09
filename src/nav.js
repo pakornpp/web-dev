@@ -10,7 +10,7 @@ export function initNav(base = "") {
     <div class="nav-inner">
       <a href="${base || "index.html"}" class="logo-container">
         <div class="logo-dot"></div>
-        <span class="logo-name">Northwave</span>
+        <span class="logo-name">Web4SME</span>
       </a>
       <div class="nav-menu" id="nav-menu">
         <a href="#work">Work</a>
