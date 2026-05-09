@@ -12,11 +12,12 @@ export function initFooter(base = "") {
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="${base || "index.html"}" class="footer-logo-link">
-          <span class="footer-logo-name">My Website</span>
+          <div class="footer-logo-dot"></div>
+          <span class="footer-logo-name">Northwave</span>
         </a>
-        <p class="footer-tagline" data-i18n="footer.tagline"></p>
+        <p class="footer-tagline" data-i18n="footer.tagline">Building the web's next great startups.</p>
       </div>
-      <p class="footer-copy">&copy; ${year} My Website</p>
+      <p class="footer-copy">&copy; ${year} Northwave Studio. All rights reserved.</p>
     </div>
   `;
 }

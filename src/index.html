@@ -1,39 +1,256 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="page.title">My Website</title>
-  <meta name="description" content="">
+  <title data-i18n="page.title">Northwave — Web Design Studio</title>
+  <meta name="description" content="Northwave is a small studio building modern, fast, and unmistakably crafted websites for ambitious startups.">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="My Website">
-  <meta property="og:title" content="My Website">
-  <meta property="og:description" content="">
-  <meta property="og:url" content="https://example.com/index.html">
-  <meta property="og:image" content="https://example.com/src/assets/og-image.jpg">
+  <meta property="og:site_name" content="Northwave">
+  <meta property="og:title" content="Northwave — Web Design Studio">
+  <meta property="og:description" content="Northwave is a small studio building modern, fast, and unmistakably crafted websites for ambitious startups.">
+  <meta property="og:url" content="https://northwave.studio">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://example.com/index.html">
+  <link rel="canonical" href="https://northwave.studio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <nav></nav>
 
-  <main id="home">
-    <section class="hero-section">
-      <div class="hero-copy">
-        <h1 data-i18n="hero.title"></h1>
-        <p data-i18n="hero.subtitle"></p>
+  <main>
+
+    <!-- ── Hero ─────────────────────────────────────────── -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          <span data-i18n="hero.badge">Available for Q3 projects</span>
+        </div>
+        <h1 class="hero-title">
+          Websites that <span class="gradient-text">launch<br>brands</span> into orbit.
+        </h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">
+          Northwave is a small studio building modern, fast, and unmistakably crafted websites for ambitious startups.
+        </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#" data-i18n="hero.cta"></a>
+          <a class="btn btn-primary" href="#contact" data-i18n="hero.cta.primary">Start a project →</a>
+          <a class="btn btn-ghost" href="#work" data-i18n="hero.cta.secondary">See our work</a>
         </div>
       </div>
     </section>
 
-    <section class="content-section">
-      <h2 data-i18n="section.title"></h2>
-      <p data-i18n="section.body"></p>
+    <!-- ── Work ──────────────────────────────────────────── -->
+    <section class="work-section" id="work">
+      <div class="container">
+        <div class="work-header">
+          <div class="work-header-left">
+            <p class="eyebrow" data-i18n="work.eyebrow">SELECTED WORK</p>
+            <h2 data-i18n="work.title">Recent launches</h2>
+          </div>
+          <p class="work-description" data-i18n="work.description">
+            A glimpse at sites we've shipped — from data tools to commerce.
+          </p>
+        </div>
+
+        <div class="work-grid">
+
+          <!-- Cervlytics -->
+          <div class="work-card">
+            <div class="work-card-image work-card-image--analytics" aria-hidden="true">
+              <div class="mockup-analytics">
+                <div class="ma-sidebar">
+                  <div class="ma-sidebar-item ma-sidebar-item--active"></div>
+                  <div class="ma-sidebar-item"></div>
+                  <div class="ma-sidebar-item"></div>
+                  <div class="ma-sidebar-item"></div>
+                </div>
+                <div class="ma-body">
+                  <div class="ma-topbar">
+                    <div class="ma-topbar-pill"></div>
+                    <div class="ma-topbar-pill ma-topbar-pill--sm"></div>
+                  </div>
+                  <div class="ma-charts">
+                    <div class="ma-line-chart">
+                      <svg viewBox="0 0 180 60" preserveAspectRatio="none" aria-hidden="true">
+                        <defs>
+                          <linearGradient id="lineGrad" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#2DD4BF" stop-opacity="0.35"/>
+                            <stop offset="100%" stop-color="#2DD4BF" stop-opacity="0"/>
+                          </linearGradient>
+                        </defs>
+                        <polyline points="0,50 30,35 60,42 90,18 120,28 150,12 180,20" fill="none" stroke="#2DD4BF" stroke-width="2.5" stroke-linejoin="round"/>
+                        <polygon points="0,50 30,35 60,42 90,18 120,28 150,12 180,20 180,60 0,60" fill="url(#lineGrad)"/>
+                      </svg>
+                    </div>
+                    <div class="ma-bar-chart">
+                      <span style="height:50%"></span>
+                      <span style="height:80%"></span>
+                      <span style="height:40%"></span>
+                      <span style="height:100%"></span>
+                      <span style="height:65%"></span>
+                      <span style="height:55%"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="work-card-body">
+              <p class="work-card-category">SAAS DASHBOARD</p>
+              <h3 class="work-card-title">Cervlytics</h3>
+              <p class="work-card-desc">A real-time analytics platform with crisp data viz.</p>
+            </div>
+          </div>
+
+          <!-- Goodwhite -->
+          <div class="work-card">
+            <div class="work-card-image work-card-image--ecommerce" aria-hidden="true">
+              <div class="mockup-ecommerce">
+                <div class="me-nav">
+                  <div class="me-nav-logo"></div>
+                  <div class="me-nav-links">
+                    <div class="me-nav-link"></div>
+                    <div class="me-nav-link"></div>
+                    <div class="me-nav-link"></div>
+                  </div>
+                </div>
+                <div class="me-body">
+                  <div class="me-product">
+                    <div class="me-product-img"></div>
+                  </div>
+                  <div class="me-info">
+                    <div class="me-info-line me-info-line--title"></div>
+                    <div class="me-info-line me-info-line--sub"></div>
+                    <div class="me-info-line me-info-line--price"></div>
+                    <div class="me-info-btn"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="work-card-body">
+              <p class="work-card-category">ECOMMERCE</p>
+              <h3 class="work-card-title">Goodwhite</h3>
+              <p class="work-card-desc">Editorial fashion store with seamless checkout.</p>
+            </div>
+          </div>
+
+          <!-- Finncera -->
+          <div class="work-card">
+            <div class="work-card-image work-card-image--fintech" aria-hidden="true">
+              <div class="mockup-fintech">
+                <div class="mf-glow"></div>
+                <div class="mf-card mf-card--back"></div>
+                <div class="mf-card mf-card--mid"></div>
+                <div class="mf-card mf-card--front">
+                  <div class="mf-card-chip"></div>
+                  <div class="mf-card-number"></div>
+                </div>
+                <div class="mf-label">Finncera</div>
+              </div>
+            </div>
+            <div class="work-card-body">
+              <p class="work-card-category">FINTECH</p>
+              <h3 class="work-card-title">Finncera</h3>
+              <p class="work-card-desc">A bold marketing site for a next-gen banking app.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
+
+    <!-- ── Pricing ───────────────────────────────────────── -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow" data-i18n="pricing.eyebrow">PACKAGES</p>
+          <h2 data-i18n="pricing.title">Simple, transparent pricing</h2>
+          <p class="section-subtitle" data-i18n="pricing.subtitle">Pick a tier — or talk to us about a custom scope.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <!-- Launch -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3 class="pricing-name">Launch</h3>
+              <p class="pricing-desc">A polished one-page site to get you live, fast.</p>
+            </div>
+            <div class="pricing-amount">
+              <span class="pricing-price">$2,400</span>
+              <span class="pricing-period">/ project</span>
+            </div>
+            <ul class="pricing-features">
+              <li><span class="check-icon">✓</span> 1-page responsive site</li>
+              <li><span class="check-icon">✓</span> Custom design system</li>
+              <li><span class="check-icon">✓</span> CMS-ready content</li>
+              <li><span class="check-icon">✓</span> 2-week delivery</li>
+              <li><span class="check-icon">✓</span> 30 days of support</li>
+            </ul>
+            <a class="btn btn-dark pricing-btn" href="#contact" data-i18n="pricing.cta">Get started</a>
+          </div>
+
+          <!-- Growth (featured) -->
+          <div class="pricing-card pricing-card--featured">
+            <div class="pricing-popular" data-i18n="pricing.popular">Most popular</div>
+            <div class="pricing-card-header">
+              <h3 class="pricing-name">Growth</h3>
+              <p class="pricing-desc">A full marketing site engineered to convert.</p>
+            </div>
+            <div class="pricing-amount">
+              <span class="pricing-price">$6,800</span>
+              <span class="pricing-period">/ project</span>
+            </div>
+            <ul class="pricing-features">
+              <li><span class="check-icon">✓</span> Up to 6 pages</li>
+              <li><span class="check-icon">✓</span> Bespoke animations</li>
+              <li><span class="check-icon">✓</span> SEO + analytics setup</li>
+              <li><span class="check-icon">✓</span> CMS integration</li>
+              <li><span class="check-icon">✓</span> 90 days of support</li>
+            </ul>
+            <a class="btn btn-white pricing-btn" href="#contact" data-i18n="pricing.cta">Get started</a>
+          </div>
+
+          <!-- Scale -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3 class="pricing-name">Scale</h3>
+              <p class="pricing-desc">A custom platform with backend, auth, and integrations.</p>
+            </div>
+            <div class="pricing-amount">
+              <span class="pricing-price">$14,000</span>
+              <span class="pricing-period">/ project</span>
+            </div>
+            <ul class="pricing-features">
+              <li><span class="check-icon">✓</span> Custom web app</li>
+              <li><span class="check-icon">✓</span> Auth & database</li>
+              <li><span class="check-icon">✓</span> API integrations</li>
+              <li><span class="check-icon check-icon--accent">✓</span> <span class="feature-accent">Performance hardened</span></li>
+              <li><span class="check-icon check-icon--accent">✓</span> <span class="feature-accent">Priority support</span></li>
+            </ul>
+            <a class="btn btn-dark pricing-btn" href="#contact" data-i18n="pricing.cta">Get started</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA Banner ─────────────────────────────────────── -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta-inner">
+          <h2 class="cta-title" data-i18n="cta.title">Have a project in mind?</h2>
+          <p class="cta-subtitle" data-i18n="cta.subtitle">
+            Tell us about your idea — we'll get back within one business day with next steps.
+          </p>
+          <a class="btn btn-accent" href="mailto:hello@northwave.studio" data-i18n="cta.button">Contact us →</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer></footer>

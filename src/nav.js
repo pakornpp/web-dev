@@ -6,25 +6,25 @@ export function initNav(base = "") {
   const nav = document.querySelector("nav");
   if (!nav) return;
 
-  const prefix = base.replace(/[^/]*$/, "");
-
   nav.innerHTML = `
-    <a href="${base || "index.html"}" class="logo-container">
-      <span class="logo-name">My Website</span>
-    </a>
-    <div class="nav-menu" id="nav-menu">
-      <a href="${base || "index.html"}" data-i18n="nav.home"></a>
+    <div class="nav-inner">
+      <a href="${base || "index.html"}" class="logo-container">
+        <div class="logo-dot"></div>
+        <span class="logo-name">Northwave</span>
+      </a>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#work">Work</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-nav nav-cta" href="#contact">Start a project</a>
+      <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
+        aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <div class="lang-switcher">
-      <button data-lang-btn="en" onclick="window.setLanguage('en')">EN</button>
-      <button data-lang-btn="th" onclick="window.setLanguage('th')">ไทย</button>
-    </div>
-    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
-      aria-label="Toggle navigation menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
   `;
 
   const toggle = nav.querySelector(".mobile-menu-toggle");

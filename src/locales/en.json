@@ -1,10 +1,19 @@
 {
-  "page.title": "My Website",
-  "nav.home": "Home",
-  "hero.title": "Welcome",
-  "hero.subtitle": "A short description of what this site is about.",
-  "hero.cta": "Get Started",
-  "section.title": "About",
-  "section.body": "Add your content here.",
-  "footer.tagline": "Tagline goes here."
+  "page.title": "Northwave — Web Design Studio",
+  "hero.badge": "Available for Q3 projects",
+  "hero.subtitle": "Northwave is a small studio building modern, fast, and unmistakably crafted websites for ambitious startups.",
+  "hero.cta.primary": "Start a project →",
+  "hero.cta.secondary": "See our work",
+  "work.eyebrow": "SELECTED WORK",
+  "work.title": "Recent launches",
+  "work.description": "A glimpse at sites we've shipped — from data tools to commerce.",
+  "pricing.eyebrow": "PACKAGES",
+  "pricing.title": "Simple, transparent pricing",
+  "pricing.subtitle": "Pick a tier — or talk to us about a custom scope.",
+  "pricing.popular": "Most popular",
+  "pricing.cta": "Get started",
+  "cta.title": "Have a project in mind?",
+  "cta.subtitle": "Tell us about your idea — we'll get back within one business day with next steps.",
+  "cta.button": "Contact us →",
+  "footer.tagline": "Building the web's next great startups."
 }
