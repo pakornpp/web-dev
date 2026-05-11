@@ -8,8 +8,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export default {
   entry: {
     main: "./src/index.js",
-    // Add more page entries here, e.g.:
-    // about: "./src/about.js",
+    about: "./src/about.js",
   },
   output: {
     filename: "[name].js",
@@ -43,12 +42,11 @@ export default {
       filename: "index.html",
       chunks: ["main"],
     }),
-    // Add more pages here, e.g.:
-    // new HtmlWebpackPlugin({
-    //   template: "./src/about.html",
-    //   filename: "about.html",
-    //   chunks: ["about"],
-    // }),
+    new HtmlWebpackPlugin({
+      template: "./src/about.html",
+      filename: "about.html",
+      chunks: ["about"],
+    }),
     // Uncomment and add patterns when you have static files to copy:
     // new CopyWebpackPlugin({
     //   patterns: [

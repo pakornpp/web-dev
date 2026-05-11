@@ -13,9 +13,10 @@ export function initNav(base = "") {
         <span class="logo-name">Web4SME</span>
       </a>
       <div class="nav-menu" id="nav-menu">
-        <a href="#work">Work</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
+        <a href="${base ? base + "#work" : "#work"}">Work</a>
+        <a href="${base ? base + "#pricing" : "#pricing"}">Pricing</a>
+        <a href="${base ? base + "#contact" : "#contact"}">Contact</a>
+        <a href="about.html">About</a>
       </div>
       <a class="btn btn-nav nav-cta" href="#contact">Start a project</a>
       <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
@@ -24,6 +25,10 @@ export function initNav(base = "") {
         <span></span>
         <span></span>
       </button>
+      <div class="lang-switcher">
+        <button data-lang-btn="en" onclick="window.setLanguage('en')">EN</button>
+        <button data-lang-btn="th" onclick="window.setLanguage('th')">ไทย</button>
+      </div>
     </div>
   `;
 
