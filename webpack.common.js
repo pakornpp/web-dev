@@ -9,6 +9,9 @@ export default {
   entry: {
     main: "./src/index.js",
     about: "./src/about.js",
+    "portfolio-luxe-watch": "./src/portfolio-luxe-watch.js",
+    "portfolio-cafe":   "./src/portfolio-cafe.js",
+    "portfolio-puphub": "./src/portfolio-puphub.js",
   },
   output: {
     filename: "[name].js",
@@ -46,6 +49,21 @@ export default {
       template: "./src/about.html",
       filename: "about.html",
       chunks: ["about"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/portfolio-luxe-watch.html",
+      filename: "portfolio-luxe-watch.html",
+      chunks: ["portfolio-luxe-watch"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/portfolio-cafe.html",
+      filename: "portfolio-cafe.html",
+      chunks: ["portfolio-cafe"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/portfolio-puphub.html",
+      filename: "portfolio-puphub.html",
+      chunks: ["portfolio-puphub"],
     }),
     // Uncomment and add patterns when you have static files to copy:
     // new CopyWebpackPlugin({

@@ -1,0 +1,925 @@
+/* =========================================================
+   PUPHUB — บริการดูแลสุนัข Portfolio Page
+   Playful · Fresh · Friendly · Modern
+   ========================================================= */
+
+/* ── Design Tokens ─────────────────────────────────────── */
+:root {
+  --pp-dark:         #1D5C6B;
+  --pp-dark-hover:   #154A57;
+  --pp-yellow:       #F2C015;
+  --pp-yellow-dark:  #E0AD10;
+  --pp-cream:        #FEFBF0;
+  --pp-white:        #FFFFFF;
+  --pp-text:         #1A1A2E;
+  --pp-text-mid:     #4A4A60;
+  --pp-text-light:   #6B7280;
+  --pp-pink:         #E0A0C0;
+  --pp-orange:       #F5A020;
+  --pp-teal-pale:    #EAF4F6;
+  --pp-card-border:  #E5E7EB;
+  --pp-about-blob:   #C8E8F0;
+  /* dog colours */
+  --pp-dog-tan:      #D49030;
+  --pp-dog-dark:     #A06020;
+  --pp-dog-snout:    #E8C078;
+  --pp-dog-nose:     #2D1206;
+  /* typography */
+  --pp-font:         'Sarabun', -apple-system, sans-serif;
+  --pp-font-logo:    'Nunito', 'Sarabun', sans-serif;
+  /* layout */
+  --pp-max:          1200px;
+  --pp-nav-h:        72px;
+  --pp-ribbon-h:     38px;
+  --pp-r:            8px;
+  --pp-r-lg:         16px;
+  --pp-r-xl:         24px;
+}
+
+/* ── Scoped reset ──────────────────────────────────────── */
+.pp-body {
+  margin: 0;
+  background: var(--pp-cream);
+  color: var(--pp-text);
+  font-family: var(--pp-font);
+  font-size: 16px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+.pp-body *, .pp-body *::before, .pp-body *::after { box-sizing: border-box; }
+.pp-body h1, .pp-body h2, .pp-body h3 { margin: 0; line-height: 1.2; }
+.pp-body p  { margin: 0; }
+.pp-body a  { text-decoration: none; color: inherit; }
+.pp-body ul { list-style: none; margin: 0; padding: 0; }
+
+/* ── Container ─────────────────────────────────────────── */
+.pp-container {
+  max-width: var(--pp-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ═══════════════════════════════════════════════════════
+   RIBBON
+   ═══════════════════════════════════════════════════════ */
+.pp-ribbon {
+  height: var(--pp-ribbon-h);
+  background: var(--pp-dark);
+  color: rgba(255,255,255,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  font-family: var(--pp-font);
+}
+.pp-ribbon-link {
+  color: var(--pp-yellow);
+  font-weight: 700;
+}
+.pp-ribbon-link:hover { text-decoration: underline; }
+.pp-ribbon-sep { opacity: 0.4; }
+.pp-ribbon-cta {
+  color: white;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  transition: background 0.2s;
+}
+.pp-ribbon-cta:hover { background: rgba(255,255,255,0.15); }
+
+/* ═══════════════════════════════════════════════════════
+   NAVIGATION
+   ═══════════════════════════════════════════════════════ */
+.pp-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  height: var(--pp-nav-h);
+  background: var(--pp-white);
+  box-shadow: 0 1px 0 var(--pp-card-border);
+  transition: box-shadow 0.2s;
+}
+.pp-nav--scrolled { box-shadow: 0 2px 16px rgba(0,0,0,0.08); }
+
+.pp-nav-inner {
+  max-width: var(--pp-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* ── Logo ─────────────────────────────────────────────── */
+.pp-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.pp-logo-paw {
+  width: 26px;
+  height: 26px;
+  fill: var(--pp-yellow);
+  flex-shrink: 0;
+}
+.pp-logo-text {
+  font-family: var(--pp-font-logo);
+  font-size: 1.45rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+.pp-logo-pup { color: var(--pp-dark); }
+.pp-logo-hub { color: var(--pp-yellow-dark); }
+
+/* ── Nav links ────────────────────────────────────────── */
+.pp-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  flex: 1;
+  justify-content: center;
+}
+.pp-nav-link {
+  padding: 6px 11px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--pp-text-mid);
+  border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+.pp-nav-link:hover {
+  color: var(--pp-dark);
+  background: var(--pp-teal-pale);
+}
+
+/* ── Buttons (shared) ─────────────────────────────────── */
+.pp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 20px;
+  border-radius: var(--pp-r);
+  font-family: var(--pp-font);
+  font-size: 0.85rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.pp-btn--signin {
+  background: var(--pp-dark);
+  color: white;
+}
+.pp-btn--signin:hover { background: var(--pp-dark-hover); }
+.pp-btn--register {
+  background: transparent;
+  color: var(--pp-dark);
+  border: 1.5px solid var(--pp-dark);
+  padding: 7.5px 18px;
+}
+.pp-btn--register:hover { background: var(--pp-teal-pale); }
+.pp-nav-btns {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+
+/* ── Hero CTA button ──────────────────────────────────── */
+.pp-btn--hero {
+  background: var(--pp-dark);
+  color: white;
+  padding: 13px 30px;
+  font-size: 0.875rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: var(--pp-r);
+  box-shadow: 0 4px 18px rgba(29,92,107,0.28);
+}
+.pp-btn--hero:hover {
+  background: var(--pp-dark-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(29,92,107,0.38);
+}
+
+/* ═══════════════════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════════════════ */
+.pp-main { min-height: calc(100vh - var(--pp-nav-h) - var(--pp-ribbon-h)); }
+
+.pp-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 590px;
+  background: var(--pp-cream);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Hero left ────────────────────────────────────────── */
+.pp-hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 2rem 5rem 4.5rem;
+  z-index: 2;
+  position: relative;
+}
+.pp-hero-title {
+  font-size: clamp(2.2rem, 3.5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.22;
+  color: var(--pp-text);
+  margin-bottom: 1.2rem;
+}
+.pp-hero-sub {
+  font-size: 0.95rem;
+  color: var(--pp-text-light);
+  line-height: 1.75;
+  max-width: 310px;
+  margin-bottom: 2.25rem;
+}
+
+/* ── Hero right (illustration stage) ─────────────────── */
+.pp-hero-right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  overflow: hidden;
+}
+
+/* ── Paw-print decorations floating in hero ──────────── */
+.pp-paw-deco {
+  position: absolute;
+  pointer-events: none;
+  z-index: 5;
+}
+.pp-paw-deco svg { display: block; }
+.pp-paw-deco--pink   { color: var(--pp-pink); }
+.pp-paw-deco--orange { color: var(--pp-orange); }
+
+.pp-paw-deco--a { width: 40px; top: 14%;  left:  8%; transform: rotate(-25deg); }
+.pp-paw-deco--b { width: 30px; top:  8%;  left: 48%; transform: rotate(18deg);  }
+.pp-paw-deco--c { width: 36px; top: 38%;  left:  4%; transform: rotate(40deg);  }
+.pp-paw-deco--d { width: 28px; bottom: 22%; left: 50%; transform: rotate(-12deg); }
+.pp-paw-deco--e { width: 34px; bottom: 12%; right:  5%; transform: rotate(30deg); }
+
+/* ── Blob wrap ────────────────────────────────────────── */
+.pp-blob-wrap {
+  position: relative;
+  width: 430px;
+  height: 430px;
+  flex-shrink: 0;
+}
+
+/* ── Yellow organic blob ──────────────────────────────── */
+.pp-blob {
+  position: absolute;
+  width: 390px;
+  height: 370px;
+  background: var(--pp-yellow);
+  border-radius: 62% 38% 55% 45% / 52% 58% 42% 48%;
+  top: 28px;
+  left: 18px;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* ── Bone pattern decorations on blob ────────────────── */
+.pp-bone {
+  position: absolute;
+  opacity: 0.18;
+}
+.pp-bone::before,
+.pp-bone::after {
+  content: '';
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+}
+/* bone 1 */
+.pp-bone--1 {
+  width: 44px; height: 14px;
+  background: white;
+  border-radius: 7px;
+  top: 55px; right: 55px;
+  transform: rotate(48deg);
+}
+.pp-bone--1::before { width: 15px; height: 15px; top: -7px; left: -5px; }
+.pp-bone--1::after  { width: 15px; height: 15px; bottom: -7px; right: -5px; }
+/* bone 2 */
+.pp-bone--2 {
+  width: 36px; height: 12px;
+  background: white;
+  border-radius: 6px;
+  top: 200px; right: 60px;
+  transform: rotate(-32deg);
+  opacity: 0.22;
+}
+.pp-bone--2::before { width: 12px; height: 12px; top: -6px; left: -4px; }
+.pp-bone--2::after  { width: 12px; height: 12px; bottom: -6px; right: -4px; }
+/* bone 3 */
+.pp-bone--3 {
+  width: 30px; height: 10px;
+  background: white;
+  border-radius: 5px;
+  bottom: 90px; left: 45px;
+  transform: rotate(18deg);
+  opacity: 0.16;
+}
+.pp-bone--3::before { width: 10px; height: 10px; top: -5px; left: -4px; }
+.pp-bone--3::after  { width: 10px; height: 10px; bottom: -5px; right: -3px; }
+
+/* subtle blob paw pattern */
+.pp-blob-paw {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.15;
+  color: white;
+}
+.pp-blob-paw svg { display: block; }
+.pp-blob-paw--1 { width: 36px; bottom: 60px; right: 40px; transform: rotate(20deg); }
+
+/* ═══════════════════════════════════════════════════════
+   CSS DOG ILLUSTRATION (hero)
+   ═══════════════════════════════════════════════════════ */
+.pp-dog {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-46%);
+  width: 248px;
+  height: 290px;
+  z-index: 2;
+}
+
+/* Floppy ears */
+.pp-dog-ear {
+  position: absolute;
+  width: 78px;
+  height: 100px;
+  background: var(--pp-dog-dark);
+  z-index: 0;
+  top: 14px;
+}
+.pp-dog-ear--l {
+  border-radius: 50% 20% 25% 50% / 45% 20% 45% 50%;
+  left: -6px;
+  transform: rotate(-10deg);
+}
+.pp-dog-ear--r {
+  border-radius: 20% 50% 50% 20% / 20% 45% 55% 40%;
+  right: -6px;
+  transform: rotate(10deg);
+}
+
+/* Head */
+.pp-dog-head {
+  position: absolute;
+  width: 210px;
+  height: 196px;
+  background: var(--pp-dog-tan);
+  border-radius: 52% 48% 46% 54% / 56% 56% 44% 44%;
+  top: 0;
+  left: 19px;
+  z-index: 1;
+  overflow: visible;
+}
+
+/* Dark crown patch */
+.pp-dog-patch {
+  position: absolute;
+  width: 90px;
+  height: 52px;
+  background: var(--pp-dog-dark);
+  border-radius: 50%;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0.35;
+}
+
+/* ── Sunglasses ───────────────────────────────────────── */
+.pp-glasses {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  width: 170px;
+}
+.pp-lens {
+  width: 64px;
+  height: 62px;
+  background: rgba(18,44,24,0.90);
+  border-radius: 50%;
+  border: 4px solid var(--pp-yellow-dark);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+  flex-shrink: 0;
+  position: relative;
+}
+/* lens glare */
+.pp-lens::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 8px;
+  background: rgba(255,255,255,0.18);
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  transform: rotate(-30deg);
+}
+.pp-glasses-bridge {
+  flex: 1;
+  height: 4px;
+  background: var(--pp-yellow-dark);
+  border-radius: 2px;
+  min-width: 14px;
+}
+.pp-glasses-arm {
+  position: absolute;
+  top: 26px;
+  width: 24px;
+  height: 4px;
+  background: var(--pp-yellow-dark);
+  border-radius: 2px;
+}
+.pp-glasses-arm--l {
+  right: calc(100% - 6px);
+  transform: rotate(-5deg);
+  transform-origin: right center;
+}
+.pp-glasses-arm--r {
+  left: calc(100% - 6px);
+  transform: rotate(5deg);
+  transform-origin: left center;
+}
+
+/* ── Snout / nose / tongue ────────────────────────────── */
+.pp-snout {
+  position: absolute;
+  width: 96px;
+  height: 68px;
+  background: var(--pp-dog-snout);
+  border-radius: 52% 48% 48% 52% / 44% 44% 56% 56%;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  gap: 3px;
+}
+.pp-nose {
+  width: 28px;
+  height: 17px;
+  background: var(--pp-dog-nose);
+  border-radius: 50%;
+}
+.pp-tongue {
+  width: 34px;
+  height: 26px;
+  background: #EA6EA0;
+  border-radius: 50% 50% 50% 50% / 38% 38% 62% 62%;
+  position: relative;
+  margin-top: 2px;
+}
+.pp-tongue::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 16px;
+  background: rgba(0,0,0,0.14);
+  border-radius: 1px;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Chest */
+.pp-dog-chest {
+  position: absolute;
+  width: 190px;
+  height: 90px;
+  background: var(--pp-dog-tan);
+  border-radius: 50% 50% 28% 28% / 60% 60% 40% 40%;
+  bottom: -28px;
+  left: 29px;
+  z-index: 0;
+}
+
+/* ── Floating dog portrait badges ─────────────────────── */
+.pp-badge {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.14);
+  z-index: 4;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pp-badge--1 { top:  52px; left: 55px;  }
+.pp-badge--2 { top: 165px; left: 12px;  }
+.pp-badge--3 { bottom: 55px; right: 5px; }
+
+.pp-badge-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 6px;
+  overflow: hidden;
+}
+.pp-badge-inner--a { background: #DFA040; }
+.pp-badge-inner--b { background: #B06828; }
+.pp-badge-inner--c { background: #7E5030; }
+
+/* mini ear, eye, nose inside badge */
+.pp-bi-ear {
+  position: absolute;
+  width: 16px;
+  height: 22px;
+  background: inherit;
+  filter: brightness(0.75);
+  border-radius: 50%;
+  top: 4px;
+}
+.pp-bi-ear--l { left:  4px; transform: rotate(-12deg); }
+.pp-bi-ear--r { right: 4px; transform: rotate(12deg);  }
+
+.pp-bi-eye {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: #1A0A04;
+  border-radius: 50%;
+  top: 22px;
+}
+.pp-bi-eye--l { left:  12px; }
+.pp-bi-eye--r { right: 12px; }
+
+.pp-bi-nose {
+  width: 9px;
+  height: 5px;
+  background: #1A0A04;
+  border-radius: 50%;
+}
+
+/* ═══════════════════════════════════════════════════════
+   SERVICES SECTION
+   ═══════════════════════════════════════════════════════ */
+.pp-services {
+  background: var(--pp-white);
+  padding: 5.5rem 0 6rem;
+}
+
+.pp-section-hd {
+  margin-bottom: 3rem;
+}
+.pp-section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--pp-text);
+}
+.pp-section-rule {
+  width: 48px;
+  height: 3px;
+  background: var(--pp-dark);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+.pp-services-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.25rem;
+}
+
+.pp-svc-card {
+  background: var(--pp-white);
+  border: 1.5px solid var(--pp-card-border);
+  border-radius: var(--pp-r-lg);
+  padding: 2.2rem 1.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  cursor: default;
+  transition: box-shadow 0.22s, border-color 0.22s, transform 0.22s;
+}
+.pp-svc-card:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  border-color: var(--pp-dark);
+  transform: translateY(-4px);
+}
+
+.pp-svc-icon {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: var(--pp-teal-pale);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.pp-svc-icon svg {
+  width: 42px;
+  height: 42px;
+  color: var(--pp-dark);
+}
+
+.pp-svc-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--pp-text);
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* ═══════════════════════════════════════════════════════
+   ABOUT / QUOTE SECTION
+   ═══════════════════════════════════════════════════════ */
+.pp-about {
+  background: var(--pp-cream);
+  padding: 6rem 0 6.5rem;
+  overflow: hidden;
+}
+.pp-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+
+/* ── Left visual ──────────────────────────────────────── */
+.pp-about-vis {
+  position: relative;
+  height: 460px;
+}
+
+.pp-about-blob {
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  background: var(--pp-about-blob);
+  border-radius: 50% 42% 58% 42% / 42% 58% 42% 58%;
+  bottom: 20px;
+  left: 5px;
+}
+
+/* About section dog (sitting, different breed / simpler) */
+.pp-about-dog {
+  position: absolute;
+  bottom: 14px;
+  left: 48%;
+  transform: translateX(-50%);
+  width: 210px;
+  height: 270px;
+  z-index: 2;
+}
+.pp-ad-ear {
+  position: absolute;
+  width: 64px;
+  height: 88px;
+  background: #A86020;
+  z-index: 0;
+  top: 8px;
+}
+.pp-ad-ear--l {
+  border-radius: 50% 18% 22% 50%;
+  left: 2px;
+  transform: rotate(-10deg);
+}
+.pp-ad-ear--r {
+  border-radius: 18% 50% 50% 22%;
+  right: 2px;
+  transform: rotate(10deg);
+}
+.pp-ad-head {
+  position: absolute;
+  width: 170px;
+  height: 166px;
+  background: #C88028;
+  border-radius: 50%;
+  top: 0;
+  left: 20px;
+  z-index: 1;
+}
+/* Eyes */
+.pp-ad-eye {
+  position: absolute;
+  width: 20px;
+  height: 22px;
+  background: #18090A;
+  border-radius: 50%;
+  top: 56px;
+}
+.pp-ad-eye::after {
+  content: '';
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background: white;
+  border-radius: 50%;
+  top: 3px;
+  left: 4px;
+}
+.pp-ad-eye--l { left:  34px; }
+.pp-ad-eye--r { right: 34px; }
+
+/* Snout */
+.pp-ad-snout {
+  position: absolute;
+  width: 74px;
+  height: 52px;
+  background: #DDB068;
+  border-radius: 50%;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 9px;
+}
+.pp-ad-nose {
+  width: 22px;
+  height: 13px;
+  background: var(--pp-dog-nose);
+  border-radius: 50%;
+}
+
+/* Body */
+.pp-ad-body {
+  position: absolute;
+  width: 188px;
+  height: 130px;
+  background: #C88028;
+  border-radius: 50% 50% 30% 30% / 60% 60% 40% 40%;
+  bottom: -5px;
+  left: 11px;
+  z-index: 0;
+}
+
+/* Tail */
+.pp-ad-tail {
+  position: absolute;
+  width: 20px;
+  height: 64px;
+  background: #A86020;
+  border-radius: 40% 60% 60% 40%;
+  bottom: 48px;
+  right: 2px;
+  transform: rotate(32deg);
+  transform-origin: bottom center;
+  z-index: -1;
+}
+
+/* Paw print decorations on about blob */
+.pp-about-paw {
+  position: absolute;
+  pointer-events: none;
+  z-index: 3;
+}
+.pp-about-paw svg { display: block; }
+.pp-about-paw--1 {
+  width: 28px;
+  color: rgba(29,92,107,0.22);
+  top: 38px;
+  left: 36px;
+  transform: rotate(-20deg);
+}
+.pp-about-paw--2 {
+  width: 22px;
+  color: rgba(29,92,107,0.18);
+  bottom: 80px;
+  right: 38px;
+  transform: rotate(18deg);
+}
+
+/* Learn-more circle button */
+.pp-learn-more {
+  position: absolute;
+  top: 60px;
+  right: 28px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: var(--pp-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  z-index: 5;
+  box-shadow: 0 4px 18px rgba(29,92,107,0.32);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.pp-learn-more:hover {
+  transform: scale(1.07);
+  box-shadow: 0 8px 26px rgba(29,92,107,0.42);
+}
+.pp-lm-play {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+.pp-lm-text {
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-align: center;
+  line-height: 1.35;
+  font-family: var(--pp-font);
+}
+
+/* ── Right text ───────────────────────────────────────── */
+.pp-about-text { position: relative; }
+
+.pp-about-paw-accent {
+  width: 50px;
+  color: rgba(29,92,107,0.2);
+  margin-bottom: 1.5rem;
+}
+.pp-about-paw-accent svg { display: block; width: 100%; }
+
+.pp-about-quote {
+  font-size: clamp(1.6rem, 2.5vw, 2.1rem);
+  font-weight: 800;
+  line-height: 1.35;
+  color: var(--pp-text);
+  margin-bottom: 1.5rem;
+}
+.pp-about-desc {
+  font-size: 0.92rem;
+  color: var(--pp-text-light);
+  line-height: 1.85;
+  max-width: 420px;
+}
+
+/* ═══════════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════════ */
+.pp-footer {
+  background: var(--pp-dark);
+  padding: 2rem 0;
+  text-align: center;
+  font-family: var(--pp-font);
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+}
+.pp-footer a {
+  color: var(--pp-yellow);
+  font-weight: 600;
+}
+.pp-footer a:hover { text-decoration: underline; }
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .pp-services-grid { grid-template-columns: repeat(3, 1fr); }
+  .pp-svc-card:nth-child(4),
+  .pp-svc-card:nth-child(5) { grid-column: span 1; }
+}
+
+@media (max-width: 860px) {
+  .pp-hero { grid-template-columns: 1fr; }
+  .pp-hero-left {
+    padding: 4rem 2rem 2rem;
+    text-align: center;
+    align-items: center;
+  }
+  .pp-hero-right { min-height: 400px; }
+  .pp-blob-wrap { width: 340px; height: 340px; }
+  .pp-blob { width: 300px; height: 290px; }
+  .pp-about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .pp-about-vis { height: 360px; }
+  .pp-nav-links { display: none; }
+}
+
+@media (max-width: 600px) {
+  .pp-services-grid { grid-template-columns: repeat(2, 1fr); }
+  .pp-svc-card:last-child { grid-column: 1 / -1; }
+  .pp-nav-btns .pp-btn--register { display: none; }
+}

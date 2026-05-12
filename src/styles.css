@@ -404,6 +404,91 @@ nav {
 .work-card-image--ecommerce { background: #F8F5F0; }
 .work-card-image--fintech   { background: linear-gradient(145deg, #080F1E 0%, #0E1E3A 100%); }
 .work-card-image--pentap    { background: #F8FAFC; }
+.work-card-image--luxewatch { background: linear-gradient(145deg, #080706 0%, #121008 100%); }
+.work-card-image--cafe      { background: linear-gradient(145deg, #2E1A0E 0%, #1C0F08 100%); }
+
+/* ── Luxury Watch mockup ─────────────────────────────────── */
+.mockup-luxewatch {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.mlw-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(201,168,76,0.08) 0%, transparent 65%);
+}
+.mlw-dial {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at 40% 35%, #1e1c18, #050403);
+  border: 1.5px solid rgba(201,168,76,0.35);
+  box-shadow: 0 0 30px rgba(201,168,76,0.1), 0 8px 30px rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mlw-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,168,76,0.18);
+}
+.mlw-logo {
+  position: absolute;
+  font-family: 'Georgia', serif;
+  font-size: 5px;
+  letter-spacing: 0.2em;
+  color: rgba(201,168,76,0.8);
+  top: 34%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+.mlw-hand {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom center;
+  border-radius: 1px;
+}
+.mlw-hand--h {
+  width: 2px;
+  height: 22px;
+  background: #C9A84C;
+  transform: translateX(-50%) rotate(310deg);
+  margin-left: -1px;
+}
+.mlw-hand--m {
+  width: 1.5px;
+  height: 30px;
+  background: #f0ece4;
+  transform: translateX(-50%) rotate(155deg);
+  margin-left: -0.75px;
+}
+.mlw-center {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #C9A84C;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+.mlw-glow {
+  position: absolute;
+  inset: -15%;
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(201,168,76,0.06) 0%, transparent 60%);
+  pointer-events: none;
+}
 
 .work-card-img {
   width: 100%;
@@ -411,6 +496,278 @@ nav {
   object-fit: cover;
   object-position: top;
   display: block;
+}
+
+/* ── Café mockup ─────────────────────────────────────────── */
+@keyframes mc-steam {
+  0%   { transform: translateY(0) scaleX(1); opacity: 0.6; }
+  50%  { transform: translateY(-10px) scaleX(1.3); opacity: 0.3; }
+  100% { transform: translateY(-20px) scaleX(0.7); opacity: 0; }
+}
+.mockup-cafe {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.mc-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 40% 50%, rgba(196,94,42,0.18) 0%, transparent 65%),
+    radial-gradient(ellipse at 75% 70%, rgba(92,51,23,0.25) 0%, transparent 55%);
+}
+/* Cup body (trapezoid via clip-path) */
+.mc-cup {
+  position: relative;
+  flex-shrink: 0;
+  margin-right: 18px;
+}
+.mc-cup-body {
+  width: 48px;
+  height: 44px;
+  background: linear-gradient(160deg, #D4883E 0%, #B8683A 60%, #9E5028 100%);
+  clip-path: polygon(10% 0%, 90% 0%, 100% 100%, 0% 100%);
+  border-radius: 0 0 5px 5px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.4);
+}
+.mc-cup-body::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 10px;
+  background: linear-gradient(180deg, rgba(80,30,10,0.8) 0%, transparent 100%);
+}
+.mc-latte-circle {
+  position: absolute;
+  border: 1px solid rgba(232,168,78,0.5);
+  border-radius: 50%;
+  top: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.mc-latte-circle--1 { width: 12px; height: 6px; }
+.mc-latte-circle--2 { width: 20px; height: 10px; top: 1px; }
+.mc-cup-handle {
+  position: absolute;
+  right: -12px;
+  top: 10px;
+  width: 12px;
+  height: 20px;
+  border: 2.5px solid #B8683A;
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+}
+.mc-saucer {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 62px;
+  height: 8px;
+  background: #C07830;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+}
+.mc-steam {
+  position: absolute;
+  width: 2px;
+  background: rgba(246,237,216,0.5);
+  border-radius: 1px;
+  animation: mc-steam 2s ease-in-out infinite;
+}
+.mc-steam--1 { height: 12px; bottom: 56px; left: calc(50% - 22px); animation-delay: 0s; }
+.mc-steam--2 { height: 16px; bottom: 56px; left: calc(50% - 14px); animation-delay: 0.65s; }
+/* Menu strip on right side of mockup */
+.mc-menu-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px 10px 10px 12px;
+  background: rgba(246,237,216,0.06);
+  border: 1px solid rgba(196,94,42,0.2);
+  border-radius: 4px;
+  min-width: 68px;
+}
+.mc-menu-line {
+  background: rgba(246,237,216,0.25);
+  border-radius: 2px;
+  height: 4px;
+}
+.mc-menu-line--title {
+  height: 6px;
+  background: rgba(196,94,42,0.55);
+  width: 80%;
+  margin-bottom: 3px;
+}
+.mc-menu-line--item { width: 100%; }
+.mc-menu-line--short { width: 60%; }
+
+/* ── PUPHUB mockup ───────────────────────────────────────── */
+.work-card-image--puphub { background: #FEFBF0; }
+
+.mockup-puphub {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+/* mini nav */
+.mpph-nav {
+  height: 16px;
+  background: white;
+  border-bottom: 1px solid #E5E7EB;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.mpph-logo {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+.mpph-paw {
+  width: 7px;
+  height: 7px;
+  background: #F2C015;
+  border-radius: 50% 50% 40% 40%;
+}
+.mpph-logotext {
+  width: 22px;
+  height: 5px;
+  background: #1D5C6B;
+  border-radius: 2px;
+}
+.mpph-navlinks {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+}
+.mpph-nl {
+  width: 14px;
+  height: 3px;
+  background: #C0C8CC;
+  border-radius: 1.5px;
+}
+.mpph-btn {
+  width: 20px;
+  height: 7px;
+  background: #1D5C6B;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* mini hero */
+.mpph-hero {
+  flex: 1;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+.mpph-hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6px 8px;
+  gap: 4px;
+  flex: 1;
+}
+.mpph-h1 {
+  background: #1A1A2E;
+  border-radius: 2px;
+  height: 6px;
+}
+.mpph-h1--1 { width: 75%; }
+.mpph-h1--2 { width: 60%; }
+.mpph-sub {
+  width: 80%;
+  height: 3px;
+  background: #9CA3AF;
+  border-radius: 1.5px;
+  margin-top: 3px;
+}
+.mpph-cta {
+  width: 36px;
+  height: 9px;
+  background: #1D5C6B;
+  border-radius: 2px;
+  margin-top: 5px;
+}
+
+.mpph-hero-right {
+  flex-shrink: 0;
+  width: 55%;
+  position: relative;
+  overflow: hidden;
+}
+.mpph-blob {
+  position: absolute;
+  width: 72px;
+  height: 68px;
+  background: #F2C015;
+  border-radius: 55% 45% 60% 40% / 52% 58% 42% 48%;
+  bottom: 0;
+  left: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 8px;
+}
+.mpph-dog-head {
+  position: relative;
+  width: 36px;
+  height: 32px;
+  background: #D49030;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.mpph-dog-ear {
+  position: absolute;
+  width: 11px;
+  height: 16px;
+  background: #A06020;
+  border-radius: 50%;
+  top: -3px;
+}
+.mpph-dog-ear--l { left: -2px;  transform: rotate(-10deg); }
+.mpph-dog-ear--r { right: -2px; transform: rotate(10deg);  }
+.mpph-lens {
+  width: 11px;
+  height: 11px;
+  background: rgba(18,44,24,0.88);
+  border-radius: 50%;
+  border: 1.5px solid #E0AD10;
+}
+
+/* floating paw print dots in hero right */
+.mpph-paw-deco {
+  position: absolute;
+  border-radius: 50%;
+}
+.mpph-paw-deco--1 {
+  width: 8px; height: 8px;
+  background: #E0A0C0;
+  top: 10px; right: 18px;
+}
+.mpph-paw-deco--2 {
+  width: 6px; height: 6px;
+  background: #F5A020;
+  top: 24px; right: 8px;
 }
 
 /* Analytics mockup */
