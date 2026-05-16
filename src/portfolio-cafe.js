@@ -37,23 +37,10 @@ tabs.forEach((tab) => {
   });
 });
 
-/* ── Ambiance parallax ───────────────────────────────────── */
-const ambianceBg = document.getElementById("pc-ambiance-bg");
-if (ambianceBg) {
-  window.addEventListener(
-    "scroll",
-    () => {
-      const section = ambianceBg.closest(".pc-ambiance");
-      const rect = section.getBoundingClientRect();
-      const progress = -rect.top / (rect.height + window.innerHeight);
-      ambianceBg.style.transform = `translateY(${progress * 60}px)`;
-    },
-    { passive: true }
-  );
-}
-
-/* ── Fade-in on scroll for menu card ────────────────────── */
-const fadeEls = document.querySelectorAll(".pc-menu-card, .pc-stat, .pc-visit-block");
+/* ── Fade-in on scroll ───────────────────────────────────── */
+const fadeEls = document.querySelectorAll(
+  ".pc-menu-card, .pc-stat, .pc-visit-block, .pc-gallery-cell"
+);
 if ("IntersectionObserver" in window) {
   const io = new IntersectionObserver(
     (entries) => {
@@ -65,12 +52,12 @@ if ("IntersectionObserver" in window) {
         }
       });
     },
-    { threshold: 0.12 }
+    { threshold: 0.1 }
   );
   fadeEls.forEach((el) => {
     el.style.opacity = "0";
-    el.style.transform = "translateY(18px)";
-    el.style.transition = "opacity 0.55s ease, transform 0.55s ease";
+    el.style.transform = "translateY(20px)";
+    el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
     io.observe(el);
   });
 }
