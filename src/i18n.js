@@ -28,7 +28,7 @@ export async function setLanguage(lang) {
  * and applies it. Call this once on page load.
  */
 export function initLanguage() {
-  const saved = localStorage.getItem("lang") ?? "th";
+  const saved = localStorage.getItem("lang") ?? "en";
   setLanguage(saved);
 }
 

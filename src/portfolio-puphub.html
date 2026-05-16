@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUPHUB — บริการดูแลสุนัข | Portfolio Showcase</title>
+  <meta name="description" content="PUPHUB — แลนดิ้งเพจสำหรับบริการดูแลสุนัขครบวงจร ออกแบบโดย Web4SME">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Web4SME">
+  <meta property="og:title" content="PUPHUB — บริการดูแลสุนัข">
+  <meta property="og:description" content="แลนดิ้งเพจ concept สำหรับธุรกิจดูแลสัตว์เลี้ยง">
+  <link rel="canonical" href="https://www.web4sme.com/portfolio-puphub.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body class="pp-body">
+
+  <!-- ── Portfolio Ribbon ────────────────────────────────── -->
+  <div class="pp-ribbon">
+    <span>Portfolio showcase by</span>
+    <a href="index.html" class="pp-ribbon-link">Web4SME</a>
+    <span class="pp-ribbon-sep">·</span>
+    <a href="index.html#contact" class="pp-ribbon-cta">Build yours →</a>
+  </div>
+
+  <!-- ── Navigation ─────────────────────────────────────── -->
+  <nav class="pp-nav" id="pp-nav">
+    <div class="pp-nav-inner">
+
+      <!-- Logo -->
+      <a href="#home" class="pp-logo" aria-label="PUPHUB — กลับหน้าแรก">
+        <svg class="pp-logo-paw" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+          <ellipse cx="5.5"  cy="7"    rx="2.5" ry="3.2"/>
+          <ellipse cx="12"   cy="4.5"  rx="2.5" ry="3.2"/>
+          <ellipse cx="18.5" cy="7"    rx="2.5" ry="3.2"/>
+          <ellipse cx="2.5"  cy="12.5" rx="2"   ry="2.8"/>
+          <ellipse cx="21.5" cy="12.5" rx="2"   ry="2.8"/>
+          <path d="M12 10.5C6.5 10.5 4 13.5 4 17c0 2.8 2.5 4.5 8 4.5s8-1.7 8-4.5c0-3.5-2.5-6.5-8-6.5z"/>
+        </svg>
+        <span class="pp-logo-text">
+          <span class="pp-logo-pup">PUP</span><span class="pp-logo-hub">HUB</span>
+        </span>
+      </a>
+
+      <!-- Nav collapse (links + buttons, collapsible on mobile) -->
+      <div class="pp-nav-collapse" id="pp-nav-collapse">
+
+        <!-- Nav links -->
+        <div class="pp-nav-links">
+          <a href="#services" class="pp-nav-link">บริการของเรา</a>
+          <a href="#about"    class="pp-nav-link">เกี่ยวกับเรา</a>
+          <a href="#products" class="pp-nav-link">สินค้า</a>
+          <a href="#care"     class="pp-nav-link">ดูแลสัตว์เลี้ยง</a>
+          <a href="#contact"  class="pp-nav-link">ติดต่อเรา</a>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="pp-nav-btns">
+          <a href="#login"    class="pp-btn pp-btn--signin">เข้าสู่ระบบ</a>
+          <a href="#register" class="pp-btn pp-btn--register">สมัครสมาชิก</a>
+        </div>
+
+      </div><!-- /.pp-nav-collapse -->
+
+      <!-- Hamburger (mobile only) -->
+      <button class="pp-hamburger" aria-label="เปิด/ปิดเมนู" aria-expanded="false" aria-controls="pp-nav-collapse">
+        <span></span><span></span><span></span>
+      </button>
+
+    </div>
+  </nav>
+
+  <main class="pp-main">
+
+    <!-- ────────────────────────────────────────────────────
+         HERO
+         ──────────────────────────────────────────────────── -->
+    <section class="pp-hero" id="home">
+
+      <!-- Left: headline + CTA -->
+      <div class="pp-hero-left">
+        <h1 class="pp-hero-title">
+          ดูแลรักษา<br>
+          สุนัขสุดฉลาด<br>
+          ของคุณ!
+        </h1>
+        <p class="pp-hero-sub">
+          ความสัมพันธ์ระหว่างมนุษย์กับสุนัขคือสายใยแห่งความผูกพันที่ยิ่งใหญ่
+        </p>
+        <a href="#services" class="pp-btn pp-btn--hero">สำรวจเพิ่มเติม ›</a>
+      </div>
+
+      <!-- Right: CSS illustration stage -->
+      <div class="pp-hero-right" aria-hidden="true">
+
+        <!-- Scattered paw prints -->
+        <div class="pp-paw-deco pp-paw-deco--pink pp-paw-deco--a">
+          <svg viewBox="0 0 24 24">
+            <ellipse cx="5.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="12" cy="4.5" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="18.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="2.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+            <ellipse cx="21.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+            <path d="M12 10.5C6.5 10.5 4 13.5 4 17c0 2.8 2.5 4.5 8 4.5s8-1.7 8-4.5c0-3.5-2.5-6.5-8-6.5z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="pp-paw-deco pp-paw-deco--orange pp-paw-deco--b">
+          <svg viewBox="0 0 24 24">
+            <ellipse cx="5.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="12" cy="4.5" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="18.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="2.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+            <ellipse cx="21.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+            <path d="M12 10.5C6.5 10.5 4 13.5 4 17c0 2.8 2.5 4.5 8 4.5s8-1.7 8-4.5c0-3.5-2.5-6.5-8-6.5z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="pp-paw-deco pp-paw-deco--pink pp-paw-deco--c">
+          <svg viewBox="0 0 24 24">
+            <ellipse cx="5.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="12" cy="4.5" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="18.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="2.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+            <ellipse cx="21.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+            <path d="M12 10.5C6.5 10.5 4 13.5 4 17c0 2.8 2.5 4.5 8 4.5s8-1.7 8-4.5c0-3.5-2.5-6.5-8-6.5z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="pp-paw-deco pp-paw-deco--orange pp-paw-deco--d">
+          <svg viewBox="0 0 24 24">
+            <ellipse cx="5.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="12" cy="4.5" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="18.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="2.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+            <ellipse cx="21.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+            <path d="M12 10.5C6.5 10.5 4 13.5 4 17c0 2.8 2.5 4.5 8 4.5s8-1.7 8-4.5c0-3.5-2.5-6.5-8-6.5z" fill="currentColor"/>
+          </svg>
+        </div>
+        <div class="pp-paw-deco pp-paw-deco--pink pp-paw-deco--e">
+          <svg viewBox="0 0 24 24">
+            <ellipse cx="5.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="12" cy="4.5" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="18.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+            <ellipse cx="2.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+            <ellipse cx="21.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+            <path d="M12 10.5C6.5 10.5 4 13.5 4 17c0 2.8 2.5 4.5 8 4.5s8-1.7 8-4.5c0-3.5-2.5-6.5-8-6.5z" fill="currentColor"/>
+          </svg>
+        </div>
+
+        <!-- Dog photo in organic blob frame -->
+        <div class="pp-hero-photo-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&h=600&fit=crop&auto=format&q=80"
+            alt="Happy dog"
+            class="pp-hero-photo">
+        </div>
+
+      </div><!-- /.pp-hero-right -->
+    </section>
+
+    <!-- ────────────────────────────────────────────────────
+         SERVICES
+         ──────────────────────────────────────────────────── -->
+    <section class="pp-services" id="services">
+      <div class="pp-container">
+
+        <div class="pp-section-hd">
+          <h2 class="pp-section-title">หมวดหมู่บริการ</h2>
+          <div class="pp-section-rule"></div>
+        </div>
+
+        <div class="pp-services-grid">
+
+          <!-- 1 · Grooming -->
+          <div class="pp-svc-card">
+            <div class="pp-svc-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1611173622933-91942d394b04?w=300&h=180&fit=crop&auto=format&q=80"
+                alt="Dog grooming"
+                class="pp-svc-img"
+                loading="lazy">
+            </div>
+            <p class="pp-svc-label">การตัดขน</p>
+          </div>
+
+          <!-- 2 · Healthcare -->
+          <div class="pp-svc-card">
+            <div class="pp-svc-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1587764379873-97837921fd44?w=300&h=180&fit=crop&auto=format&q=80"
+                alt="Dog healthcare"
+                class="pp-svc-img"
+                loading="lazy">
+            </div>
+            <p class="pp-svc-label">การดูแลสุขภาพ</p>
+          </div>
+
+          <!-- 3 · Daycare -->
+          <div class="pp-svc-card">
+            <div class="pp-svc-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=300&h=180&fit=crop&auto=format&q=80"
+                alt="Dog daycare"
+                class="pp-svc-img"
+                loading="lazy">
+            </div>
+            <p class="pp-svc-label">รับฝากสัตว์เลี้ยง</p>
+          </div>
+
+          <!-- 4 · Training -->
+          <div class="pp-svc-card">
+            <div class="pp-svc-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?w=300&h=180&fit=crop&auto=format&q=80"
+                alt="Dog training"
+                class="pp-svc-img"
+                loading="lazy">
+            </div>
+            <p class="pp-svc-label">ฝึกพฤติกรรม</p>
+          </div>
+
+          <!-- 5 · Hygienic care -->
+          <div class="pp-svc-card">
+            <div class="pp-svc-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1566624790190-511a09f6ddbd?w=300&h=180&fit=crop&auto=format&q=80"
+                alt="Dog hygiene care"
+                class="pp-svc-img"
+                loading="lazy">
+            </div>
+            <p class="pp-svc-label">ดูแลความสะอาด</p>
+          </div>
+
+        </div><!-- /.pp-services-grid -->
+      </div><!-- /.pp-container -->
+    </section>
+
+    <!-- ────────────────────────────────────────────────────
+         ABOUT / QUOTE
+         ──────────────────────────────────────────────────── -->
+    <section class="pp-about" id="about">
+      <div class="pp-container">
+        <div class="pp-about-grid">
+
+          <!-- Left: dog illustration + learn-more button -->
+          <div class="pp-about-vis" aria-hidden="true">
+            <!-- blue blob -->
+            <div class="pp-about-blob"></div>
+
+            <!-- Real dog photo -->
+            <div class="pp-about-photo-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w=480&h=520&fit=crop&auto=format&q=80"
+                alt="Happy dog"
+                class="pp-about-photo"
+                loading="lazy">
+            </div>
+
+            <!-- paw accents on blob -->
+            <div class="pp-about-paw pp-about-paw--1">
+              <svg viewBox="0 0 24 24">
+                <ellipse cx="5.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+                <ellipse cx="12" cy="4.5" rx="2.5" ry="3.2" fill="currentColor"/>
+                <ellipse cx="18.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+                <ellipse cx="2.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+                <ellipse cx="21.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+                <path d="M12 10.5C6.5 10.5 4 13.5 4 17c0 2.8 2.5 4.5 8 4.5s8-1.7 8-4.5c0-3.5-2.5-6.5-8-6.5z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="pp-about-paw pp-about-paw--2">
+              <svg viewBox="0 0 24 24">
+                <ellipse cx="5.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+                <ellipse cx="12" cy="4.5" rx="2.5" ry="3.2" fill="currentColor"/>
+                <ellipse cx="18.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+                <ellipse cx="2.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+                <ellipse cx="21.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+                <path d="M12 10.5C6.5 10.5 4 13.5 4 17c0 2.8 2.5 4.5 8 4.5s8-1.7 8-4.5c0-3.5-2.5-6.5-8-6.5z" fill="currentColor"/>
+              </svg>
+            </div>
+
+            <!-- learn more circular button -->
+            <a href="#services" class="pp-learn-more">
+              <span class="pp-lm-play">▶</span>
+              <span class="pp-lm-text">เรียนรู้<br>เพิ่มเติม</span>
+            </a>
+          </div>
+
+          <!-- Right: quote + body copy -->
+          <div class="pp-about-text">
+            <div class="pp-about-paw-accent" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <ellipse cx="5.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+                <ellipse cx="12" cy="4.5" rx="2.5" ry="3.2" fill="currentColor"/>
+                <ellipse cx="18.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
+                <ellipse cx="2.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+                <ellipse cx="21.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
+                <path d="M12 10.5C6.5 10.5 4 13.5 4 17c0 2.8 2.5 4.5 8 4.5s8-1.7 8-4.5c0-3.5-2.5-6.5-8-6.5z" fill="currentColor"/>
+              </svg>
+            </div>
+            <h2 class="pp-about-quote">
+              สุนัขพูดได้ แต่เฉพาะกับ<br>
+              คนที่รู้จักฟัง
+            </h2>
+            <p class="pp-about-desc">
+              เราเชื่อว่าสุนัขทุกตัวสมควรได้รับความรัก การดูแล และความใส่ใจ
+              บริการของเราออกแบบมาเพื่อมอบประสบการณ์ที่ดีที่สุดให้กับน้องหมาและเจ้าของ
+              ด้วยทีมผู้เชี่ยวชาญที่รักสัตว์เลี้ยงทุกตัวเสมือนครอบครัว
+            </p>
+          </div>
+
+        </div><!-- /.pp-about-grid -->
+      </div><!-- /.pp-container -->
+    </section>
+
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────── -->
+  <footer class="pp-footer">
+    <div class="pp-container">
+      <p>สร้างโดย <a href="index.html">Web4SME</a> · สงวนลิขสิทธิ์ © 2024 PUPHUB</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var btn      = document.querySelector('.pp-hamburger');
+      var collapse = document.getElementById('pp-nav-collapse');
+      if (!btn || !collapse) return;
+      btn.addEventListener('click', function () {
+        var open = collapse.classList.toggle('pp-nav--open');
+        btn.classList.toggle('pp-hamburger--open', open);
+        btn.setAttribute('aria-expanded', String(open));
+      });
+      collapse.querySelectorAll('.pp-nav-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          collapse.classList.remove('pp-nav--open');
+          btn.classList.remove('pp-hamburger--open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

@@ -1,39 +1,381 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="page.title">My Website</title>
-  <meta name="description" content="">
+  <title data-i18n="page.title">Web4SME — Web Design Studio</title>
+  <meta name="description" content="Web4SME is a small studio building modern, fast, and unmistakably crafted websites for ambitious startups.">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="My Website">
-  <meta property="og:title" content="My Website">
-  <meta property="og:description" content="">
-  <meta property="og:url" content="https://example.com/index.html">
-  <meta property="og:image" content="https://example.com/src/assets/og-image.jpg">
+  <meta property="og:site_name" content="Web4SME">
+  <meta property="og:title" content="Web4SME — Web Design Studio">
+  <meta property="og:description" content="Web4SME is a small studio building modern, fast, and unmistakably crafted websites for ambitious startups.">
+  <meta property="og:url" content="https://www.web4sme.com">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://example.com/index.html">
+  <link rel="canonical" href="https://www.web4sme.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <nav></nav>
 
-  <main id="home">
-    <section class="hero-section">
-      <div class="hero-copy">
-        <h1 data-i18n="hero.title"></h1>
-        <p data-i18n="hero.subtitle"></p>
+  <main>
+
+    <!-- ── Hero ─────────────────────────────────────────── -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <h1 class="hero-title">
+          Websites that <span class="gradient-text">launch<br>brands</span> into orbit.
+        </h1>
+        <p class="hero-subtitle" data-i18n="hero.subtitle">
+          Web4SME is a small studio building modern, fast, and unmistakably crafted websites for ambitious startups.
+        </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#" data-i18n="hero.cta"></a>
+          <a class="btn btn-primary" href="#contact" data-i18n="hero.cta.primary">Start a project →</a>
+          <a class="btn btn-ghost" href="#work" data-i18n="hero.cta.secondary">See our work</a>
         </div>
       </div>
     </section>
 
-    <section class="content-section">
-      <h2 data-i18n="section.title"></h2>
-      <p data-i18n="section.body"></p>
+    <!-- ── Work ──────────────────────────────────────────── -->
+    <section class="work-section" id="work">
+      <div class="container">
+        <div class="work-header">
+          <div class="work-header-left">
+            <p class="eyebrow" data-i18n="work.eyebrow">SELECTED WORK</p>
+            <h2 data-i18n="work.title">Recent launches</h2>
+          </div>
+          <p class="work-description" data-i18n="work.description">
+            A glimpse at sites we've shipped — from data tools to commerce.
+          </p>
+        </div>
+
+        <div class="work-grid">
+
+          <!-- Penta P -->
+          <div class="work-card">
+            <div class="work-card-image work-card-image--pentap">
+              <img src="../assets/pentap.png" alt="Penta P Group website screenshot" class="work-card-img">
+            </div>
+            <div class="work-card-body">
+              <p class="work-card-category">REAL ESTATE</p>
+              <h3 class="work-card-title">Penta P Group</h3>
+              <p class="work-card-desc">Apartment and warehouse rental solutions.</p>
+              <a class="work-card-link" href="https://pentapgroup.com" target="_blank" rel="noopener noreferrer">pentapgroup.com ↗</a>
+            </div>
+          </div>
+
+          <!-- AUREM Luxury Watch -->
+          <div class="work-card">
+            <div class="work-card-image work-card-image--luxewatch" aria-hidden="true">
+              <div class="mockup-luxewatch">
+                <div class="mlw-bg"></div>
+                <div class="mlw-dial">
+                  <div class="mlw-ring"></div>
+                  <div class="mlw-logo">AUREM</div>
+                  <div class="mlw-hand mlw-hand--h"></div>
+                  <div class="mlw-hand mlw-hand--m"></div>
+                  <div class="mlw-center"></div>
+                </div>
+                <div class="mlw-glow"></div>
+              </div>
+            </div>
+            <div class="work-card-body">
+              <p class="work-card-category">LUXURY E-COMMERCE</p>
+              <h3 class="work-card-title">AUREM Timepieces</h3>
+              <p class="work-card-desc">Dark, cinematic high-end watch brand with editorial design.</p>
+              <a class="work-card-link" href="portfolio-luxe-watch.html" target="_blank" rel="noopener noreferrer">View showcase ↗</a>
+            </div>
+          </div>
+
+          <!-- TERROIR Café -->
+          <div class="work-card">
+            <div class="work-card-image work-card-image--cafe" aria-hidden="true">
+              <div class="mockup-cafe">
+                <div class="mc-bg"></div>
+                <div class="mc-cup">
+                  <div class="mc-cup-body">
+                    <div class="mc-latte-circle mc-latte-circle--1"></div>
+                    <div class="mc-latte-circle mc-latte-circle--2"></div>
+                  </div>
+                  <div class="mc-cup-handle"></div>
+                  <div class="mc-saucer"></div>
+                </div>
+                <div class="mc-steam mc-steam--1"></div>
+                <div class="mc-steam mc-steam--2"></div>
+                <div class="mc-menu-strip">
+                  <div class="mc-menu-line mc-menu-line--title"></div>
+                  <div class="mc-menu-line mc-menu-line--item"></div>
+                  <div class="mc-menu-line mc-menu-line--item"></div>
+                  <div class="mc-menu-line mc-menu-line--item mc-menu-line--short"></div>
+                </div>
+              </div>
+            </div>
+            <div class="work-card-body">
+              <p class="work-card-category">HOSPITALITY &amp; LIFESTYLE</p>
+              <h3 class="work-card-title">TERROIR Café</h3>
+              <p class="work-card-desc">Warm, organic café brand with hand-crafted menu design.</p>
+              <a class="work-card-link" href="portfolio-cafe.html" target="_blank" rel="noopener noreferrer">View showcase ↗</a>
+            </div>
+          </div>
+
+          <!-- PUPHUB Pet Grooming -->
+          <div class="work-card">
+            <div class="work-card-image work-card-image--puphub" aria-hidden="true">
+              <div class="mockup-puphub">
+                <div class="mpph-nav">
+                  <div class="mpph-logo">
+                    <div class="mpph-paw"></div>
+                    <div class="mpph-logotext"></div>
+                  </div>
+                  <div class="mpph-navlinks">
+                    <div class="mpph-nl"></div>
+                    <div class="mpph-nl"></div>
+                    <div class="mpph-nl"></div>
+                  </div>
+                  <div class="mpph-btn"></div>
+                </div>
+                <div class="mpph-hero">
+                  <div class="mpph-hero-left">
+                    <div class="mpph-h1 mpph-h1--1"></div>
+                    <div class="mpph-h1 mpph-h1--2"></div>
+                    <div class="mpph-sub"></div>
+                    <div class="mpph-cta"></div>
+                  </div>
+                  <div class="mpph-hero-right">
+                    <div class="mpph-blob">
+                      <div class="mpph-dog-head">
+                        <div class="mpph-dog-ear mpph-dog-ear--l"></div>
+                        <div class="mpph-dog-ear mpph-dog-ear--r"></div>
+                        <div class="mpph-lens mpph-lens--l"></div>
+                        <div class="mpph-lens mpph-lens--r"></div>
+                      </div>
+                    </div>
+                    <div class="mpph-paw-deco mpph-paw-deco--1"></div>
+                    <div class="mpph-paw-deco mpph-paw-deco--2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="work-card-body">
+              <p class="work-card-category">PET SERVICES</p>
+              <h3 class="work-card-title">PUPHUB</h3>
+              <p class="work-card-desc">Playful, modern landing page for a pet grooming service.</p>
+              <a class="work-card-link" href="portfolio-puphub.html" target="_blank" rel="noopener noreferrer">View showcase &#x2197;</a>
+            </div>
+          </div>
+
+          <!-- Tash P Food Photography -->
+          <div class="work-card">
+            <div class="work-card-image work-card-image--photographer" aria-hidden="true">
+              <div class="mockup-photographer">
+                <div class="mph-nav">
+                  <div class="mph-logo"></div>
+                  <div class="mph-nav-links">
+                    <div class="mph-nl"></div>
+                    <div class="mph-nl"></div>
+                    <div class="mph-nl"></div>
+                  </div>
+                  <div class="mph-badge"></div>
+                </div>
+                <div class="mph-hero">
+                  <div class="mph-hero-left">
+                    <div class="mph-h1 mph-h1--1"></div>
+                    <div class="mph-h1 mph-h1--italic"><em>stories</em></div>
+                    <div class="mph-h1 mph-h1--2"></div>
+                    <div class="mph-stats">
+                      <div class="mph-stat"></div>
+                      <div class="mph-stat"></div>
+                      <div class="mph-stat"></div>
+                    </div>
+                  </div>
+                  <div class="mph-hero-right">
+                    <div class="mph-photo"></div>
+                  </div>
+                </div>
+                <div class="mph-marquee">
+                  <div class="mph-marquee-line"></div>
+                </div>
+              </div>
+            </div>
+            <div class="work-card-body">
+              <p class="work-card-category">PHOTOGRAPHY</p>
+              <h3 class="work-card-title">Tash P</h3>
+              <p class="work-card-desc">Freelance food photographer specialising in restaurant editorials, cookbook shoots &amp; brand campaigns.</p>
+              <a class="work-card-link" href="portfolio-photographer.html" target="_blank" rel="noopener noreferrer">View showcase ↗</a>
+            </div>
+          </div>
+
+          <!-- GLOSTAR Cosmetics -->
+          <div class="work-card">
+            <div class="work-card-image work-card-image--glostar" aria-hidden="true">
+              <div class="mockup-glostar">
+                <div class="mgs-announce"></div>
+                <div class="mgs-nav">
+                  <div class="mgs-nav-logo"></div>
+                  <div class="mgs-nav-links">
+                    <div class="mgs-nl"></div>
+                    <div class="mgs-nl"></div>
+                    <div class="mgs-nl"></div>
+                  </div>
+                  <div class="mgs-nav-icon"></div>
+                </div>
+                <div class="mgs-hero">
+                  <div class="mgs-hero-left">
+                    <div class="mgs-h1 mgs-h1--1"></div>
+                    <div class="mgs-h1 mgs-h1--2"></div>
+                    <div class="mgs-h1 mgs-h1--3"></div>
+                    <div class="mgs-sub"></div>
+                    <div class="mgs-cta"></div>
+                  </div>
+                  <div class="mgs-hero-right">
+                    <div class="mgs-img-box">
+                      <span class="mgs-pill"></span>
+                    </div>
+                  </div>
+                  <span class="mgs-star mgs-star--a">✦</span>
+                  <span class="mgs-star mgs-star--b">✦</span>
+                </div>
+                <div class="mgs-cards">
+                  <div class="mgs-card"><div class="mgs-card-img"></div><div class="mgs-card-line"></div><div class="mgs-card-line mgs-card-line--sm"></div></div>
+                  <div class="mgs-card"><div class="mgs-card-img"></div><div class="mgs-card-line"></div><div class="mgs-card-line mgs-card-line--sm"></div></div>
+                  <div class="mgs-card"><div class="mgs-card-img"></div><div class="mgs-card-line"></div><div class="mgs-card-line mgs-card-line--sm"></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="work-card-body">
+              <p class="work-card-category">COSMETICS &amp; SKINCARE</p>
+              <h3 class="work-card-title">GLOSTAR</h3>
+              <p class="work-card-desc">Playful, bold skincare brand with a star-themed product landing page.</p>
+              <a class="work-card-link" href="portfolio-glostar.html" target="_blank" rel="noopener noreferrer">View showcase ↗</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
+
+    <!-- ── Pricing ───────────────────────────────────────── -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow" data-i18n="pricing.eyebrow">PACKAGES</p>
+          <h2 data-i18n="pricing.title">Simple, transparent pricing</h2>
+          <p class="section-subtitle" data-i18n="pricing.subtitle">Pick a tier — or talk to us about a custom scope.</p>
+        </div>
+
+        <div class="pricing-grid">
+
+          <!-- Single Page -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3 class="pricing-name">Single Page</h3>
+              <p class="pricing-desc">A polished landing page to get you live, fast.</p>
+            </div>
+            <div class="pricing-amount">
+              <span class="pricing-from">Starting from</span>
+              <span class="pricing-price">฿4,990</span>
+            </div>
+            <ul class="pricing-features">
+              <li><span class="check-icon">✓</span> 1 Landing page</li>
+              <li><span class="check-icon">✓</span> Design from template</li>
+              <li><span class="check-icon">✓</span> Responsive on all devices</li>
+              <li><span class="check-icon">✓</span> Basic SEO</li>
+              <li><span class="check-icon">✓</span> Link to LINE and Socials</li>
+              <li><span class="check-icon">✓</span> Google map</li>
+              <li><span class="check-icon">✓</span> 1 Year free domain and hosting</li>
+            </ul>
+            <a class="btn btn-dark pricing-btn" href="#contact" data-i18n="pricing.cta">Get started</a>
+          </div>
+
+          <!-- Starter -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3 class="pricing-name">Starter</h3>
+              <p class="pricing-desc">A custom multi-page site built around your brand.</p>
+            </div>
+            <div class="pricing-amount">
+              <span class="pricing-from">Starting from</span>
+              <span class="pricing-price">฿12,900</span>
+            </div>
+            <ul class="pricing-features">
+              <li><span class="check-icon">✓</span> 1 to 5 pages</li>
+              <li><span class="check-icon">✓</span> Custom Design</li>
+              <li><span class="check-icon">✓</span> Responsive on all devices</li>
+              <li><span class="check-icon">✓</span> Basic SEO</li>
+              <li><span class="check-icon">✓</span> Link to LINE and Socials</li>
+              <li><span class="check-icon">✓</span> Google map</li>
+              <li><span class="check-icon">✓</span> 1 Year free domain and hosting</li>
+            </ul>
+            <a class="btn btn-dark pricing-btn" href="#contact" data-i18n="pricing.cta">Get started</a>
+          </div>
+
+          <!-- Standard (featured) -->
+          <div class="pricing-card pricing-card--featured">
+            <div class="pricing-popular" data-i18n="pricing.popular">Most popular</div>
+            <div class="pricing-card-header">
+              <h3 class="pricing-name">Standard</h3>
+              <p class="pricing-desc">A full marketing site with SEO & AI search optimisation.</p>
+            </div>
+            <div class="pricing-amount">
+              <span class="pricing-from">Starting from</span>
+              <span class="pricing-price">฿15,900</span>
+            </div>
+            <ul class="pricing-features">
+              <li><span class="check-icon">✓</span> 6 to 10 pages</li>
+              <li><span class="check-icon">✓</span> Custom Design</li>
+              <li><span class="check-icon">✓</span> Responsive on all devices</li>
+              <li><span class="check-icon">✓</span> SEO &amp; AI search optimisation</li>
+              <li><span class="check-icon">✓</span> Link to LINE and Socials</li>
+              <li><span class="check-icon">✓</span> Google map</li>
+              <li><span class="check-icon">✓</span> 1 Year free domain and hosting</li>
+              <li><span class="check-icon">✓</span> Contact form</li>
+            </ul>
+            <a class="btn btn-white pricing-btn" href="#contact" data-i18n="pricing.cta">Get started</a>
+          </div>
+
+          <!-- E-Commerce Package -->
+          <div class="pricing-card">
+            <div class="pricing-card-header">
+              <h3 class="pricing-name">E-Commerce</h3>
+              <p class="pricing-desc">A fully featured online store ready to sell from day one.</p>
+            </div>
+            <div class="pricing-amount">
+              <span class="pricing-from">Starting from</span>
+              <span class="pricing-price">฿69,990</span>
+            </div>
+            <ul class="pricing-features">
+              <li><span class="check-icon">✓</span> Full E-commerce</li>
+              <li><span class="check-icon">✓</span> Cart &amp; Checkout</li>
+              <li><span class="check-icon">✓</span> Stock management</li>
+              <li><span class="check-icon">✓</span> 6 months management</li>
+              <li><span class="check-icon">✓</span> SEO &amp; AI search optimisation</li>
+              <li><span class="check-icon">✓</span> Link to LINE and Socials</li>
+              <li><span class="check-icon">✓</span> Google map</li>
+              <li><span class="check-icon">✓</span> 1 Year free domain and hosting</li>
+            </ul>
+            <a class="btn btn-dark pricing-btn" href="#contact" data-i18n="pricing.cta">Get started</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA Banner ─────────────────────────────────────── -->
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="cta-inner">
+          <h2 class="cta-title" data-i18n="cta.title">Have a project in mind?</h2>
+          <p class="cta-subtitle" data-i18n="cta.subtitle">
+            Tell us about your idea — we'll get back within one business day with next steps.
+          </p>
+          <a class="btn btn-accent" href="mailto:hello@web4sme.com" data-i18n="cta.button">Contact us →</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer></footer>

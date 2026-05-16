@@ -8,8 +8,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export default {
   entry: {
     main: "./src/index.js",
-    // Add more page entries here, e.g.:
-    // about: "./src/about.js",
+    about: "./src/about.js",
+    "portfolio-luxe-watch": "./src/portfolio-luxe-watch.js",
+    "portfolio-cafe":      "./src/portfolio-cafe.js",
+    "portfolio-puphub":    "./src/portfolio-puphub.js",
+    "portfolio-glostar":   "./src/portfolio-glostar.js",
+    "portfolio-photographer": "./src/portfolio-photographer.js",
   },
   output: {
     filename: "[name].js",
@@ -43,12 +47,36 @@ export default {
       filename: "index.html",
       chunks: ["main"],
     }),
-    // Add more pages here, e.g.:
-    // new HtmlWebpackPlugin({
-    //   template: "./src/about.html",
-    //   filename: "about.html",
-    //   chunks: ["about"],
-    // }),
+    new HtmlWebpackPlugin({
+      template: "./src/about.html",
+      filename: "about.html",
+      chunks: ["about"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/portfolio-luxe-watch.html",
+      filename: "portfolio-luxe-watch.html",
+      chunks: ["portfolio-luxe-watch"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/portfolio-cafe.html",
+      filename: "portfolio-cafe.html",
+      chunks: ["portfolio-cafe"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/portfolio-puphub.html",
+      filename: "portfolio-puphub.html",
+      chunks: ["portfolio-puphub"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/portfolio-glostar.html",
+      filename: "portfolio-glostar.html",
+      chunks: ["portfolio-glostar"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/portfolio-photographer.html",
+      filename: "portfolio-photographer.html",
+      chunks: ["portfolio-photographer"],
+    }),
     // Uncomment and add patterns when you have static files to copy:
     // new CopyWebpackPlugin({
     //   patterns: [
