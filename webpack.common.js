@@ -13,6 +13,7 @@ export default {
     "portfolio-cafe":      "./src/portfolio-cafe.js",
     "portfolio-puphub":    "./src/portfolio-puphub.js",
     "portfolio-glostar":   "./src/portfolio-glostar.js",
+    "portfolio-photographer": "./src/portfolio-photographer.js",
   },
   output: {
     filename: "[name].js",
@@ -70,6 +71,11 @@ export default {
       template: "./src/portfolio-glostar.html",
       filename: "portfolio-glostar.html",
       chunks: ["portfolio-glostar"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/portfolio-photographer.html",
+      filename: "portfolio-photographer.html",
+      chunks: ["portfolio-photographer"],
     }),
     // Uncomment and add patterns when you have static files to copy:
     // new CopyWebpackPlugin({

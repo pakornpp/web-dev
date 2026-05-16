@@ -770,6 +770,131 @@ nav {
   top: 24px; right: 8px;
 }
 
+/* ── Alex Monroe Photography mockup ─────────────────────── */
+.work-card-image--photographer { background: #f0f4f0; }
+
+.mockup-photographer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+/* mini nav */
+.mph-nav {
+  height: 14px;
+  background: rgba(255,255,255,0.94);
+  border-bottom: 1px solid #d1d5db;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  gap: 4px;
+  flex-shrink: 0;
+}
+.mph-logo {
+  width: 26px;
+  height: 4px;
+  background: #0a0a0a;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.mph-nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 4px;
+}
+.mph-nl {
+  width: 10px;
+  height: 3px;
+  background: rgba(17,17,17,0.25);
+  border-radius: 1.5px;
+}
+.mph-badge {
+  width: 18px;
+  height: 6px;
+  background: #dcfce7;
+  border-radius: 6px;
+  border: 1px solid #86efac;
+  flex-shrink: 0;
+}
+
+/* hero two-column */
+.mph-hero {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+.mph-hero-left {
+  flex: 1;
+  padding: 6px 5px 6px 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  background: #ffffff;
+}
+.mph-h1 {
+  height: 5px;
+  background: #0a0a0a;
+  border-radius: 1.5px;
+}
+.mph-h1--1   { width: 72%; }
+.mph-h1--2   { width: 62%; }
+.mph-h1--italic {
+  height: 6px;
+  width: 55%;
+  background: #16a34a;
+  border-radius: 1.5px;
+}
+.mph-stats {
+  display: flex;
+  gap: 3px;
+  margin-top: 4px;
+}
+.mph-stat {
+  flex: 1;
+  height: 10px;
+  background: #f3f4f6;
+  border-radius: 2px;
+  border: 1px solid #e5e7eb;
+}
+.mph-hero-right {
+  width: 46%;
+  flex-shrink: 0;
+}
+.mph-photo {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #b0c4b0 0%, #6b8e6b 60%, #3d5a3d 100%);
+}
+
+/* marquee strip */
+.mph-marquee {
+  height: 8px;
+  background: #f9fafb;
+  border-top: 1px solid #d1d5db;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.mph-marquee-line {
+  height: 2px;
+  width: 200%;
+  background: repeating-linear-gradient(
+    90deg,
+    #d1d5db 0px,
+    #d1d5db 12px,
+    transparent 12px,
+    transparent 20px
+  );
+  border-radius: 1px;
+}
+
 /* ── GLOSTAR mockup ─────────────────────────────────────── */
 .work-card-image--glostar { background: #FFE000; }
 
