@@ -21,6 +21,7 @@
   --ph-font-sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
   --ph-max:          1200px;
+  --ph-page-max:     1600px;
   --ph-nav-h:        70px;
   --ph-section-gap:  clamp(5rem, 10vw, 9rem);
 
@@ -39,11 +40,19 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: var(--ph-font-sans);
-  background: var(--ph-white);
+  background: var(--ph-gray-100);
   color: var(--ph-gray-700);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
+}
+
+.ph-page-wrap {
+  max-width: var(--ph-page-max);
+  margin: 0 auto;
+  background: var(--ph-white);
+  box-shadow: 0 0 0 1px var(--ph-gray-300), 0 0 60px rgba(0,0,0,0.06);
+  overflow: clip;
 }
 
 h1, h2, h3, h4 {
@@ -274,7 +283,7 @@ img { max-width: 100%; display: block; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
   display: block;
 }
 
@@ -282,7 +291,7 @@ img { max-width: 100%; display: block; }
 .ph-hero-badge {
   position: absolute;
   bottom: 2.5rem;
-  left: -1.5rem;
+  right: 1.5rem;
   background: var(--ph-white);
   border: 1px solid var(--ph-gray-300);
   border-radius: 14px;
@@ -965,9 +974,17 @@ img { max-width: 100%; display: block; }
   }
 
   .ph-hero-media {
-    height: 55vw;
-    min-height: 280px;
-    max-height: 460px;
+    height: auto;
+  }
+
+  .ph-hero-img-wrap {
+    position: static;
+  }
+
+  .ph-hero-img {
+    height: auto;
+    object-fit: contain;
+    object-position: center center;
   }
 
   .ph-hero-text {
@@ -977,7 +994,7 @@ img { max-width: 100%; display: block; }
 
   .ph-hero-badge {
     bottom: 1.5rem;
-    left: 1rem;
+    right: 1rem;
   }
 
   .ph-about-inner {
