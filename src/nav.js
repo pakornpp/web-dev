@@ -28,7 +28,7 @@ export function initNav(base = "") {
         <button data-lang-btn="en" onclick="window.setLanguage('en')">EN</button>
         <button data-lang-btn="th" onclick="window.setLanguage('th')">ไทย</button>
       </div>
-      <a class="btn btn-nav nav-cta" href="#contact">Start a project</a>
+      <a class="btn btn-nav nav-cta" href="${base ? base + "#contact" : "#contact"}">Start a project</a>
     </div>
   `;
 
