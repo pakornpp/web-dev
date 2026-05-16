@@ -1048,6 +1048,11 @@ img { max-width: 100%; display: block; }
 
   .ph-hero-title { font-size: clamp(2.5rem, 12vw, 4rem); }
 
+  /* Adjust portrait crop on mobile — change the value to reframe */
+  .ph-about-img {
+    object-position: center 20%;
+  }
+
   .ph-testi-grid { grid-template-columns: 1fr; }
 
   .ph-gallery-grid {
