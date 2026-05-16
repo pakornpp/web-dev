@@ -18,7 +18,6 @@ export function initNav(base = "") {
         <a href="${base ? base + "#contact" : "#contact"}">Contact</a>
         <a href="about.html">About</a>
       </div>
-      <a class="btn btn-nav nav-cta" href="#contact">Start a project</a>
       <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
         aria-label="Toggle navigation menu">
         <span></span>
@@ -29,6 +28,7 @@ export function initNav(base = "") {
         <button data-lang-btn="en" onclick="window.setLanguage('en')">EN</button>
         <button data-lang-btn="th" onclick="window.setLanguage('th')">ไทย</button>
       </div>
+      <a class="btn btn-nav nav-cta" href="#contact">Start a project</a>
     </div>
   `;
 
