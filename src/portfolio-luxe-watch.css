@@ -395,11 +395,12 @@
   font-style: italic;
   color: var(--lw-gold-light);
 }
-.lw-hero-sub {
+.lw-body .lw-hero-sub {
   font-size: 0.9rem;
   line-height: 1.8;
   color: var(--lw-muted);
   max-width: 400px;
+  margin-top: 2.5rem;
   margin-bottom: 2.5rem;
   letter-spacing: 0.02em;
 }
@@ -807,7 +808,7 @@
   font-style: italic;
   color: var(--lw-gold-light);
 }
-.lw-parallax-body {
+.lw-parallax-content > .lw-parallax-body {
   font-size: 0.9rem;
   color: var(--lw-muted);
   line-height: 1.9;
@@ -916,13 +917,13 @@
   font-style: italic;
   color: var(--lw-gold-light);
 }
-.lw-acquire-sub {
+.lw-acquire-inner > .lw-acquire-sub {
   font-size: 0.88rem;
   line-height: 1.9;
   color: var(--lw-muted);
   margin-bottom: 2.5rem;
 }
-.lw-acquire-note {
+.lw-acquire-inner > .lw-acquire-note {
   margin-top: 1.25rem;
   font-size: 0.65rem;
   letter-spacing: 0.1em;

@@ -191,12 +191,15 @@
   padding: 6px 11px;
   font-size: 0.82rem;
   font-weight: 500;
-  color: var(--pp-text-mid);
   border-radius: 4px;
   transition: color 0.2s, background 0.2s;
   white-space: nowrap;
 }
-.pp-nav-link:hover {
+/* chain with parent so specificity (0-2-0) beats .pp-body a (0-1-1) */
+.pp-nav-links .pp-nav-link {
+  color: var(--pp-text-mid);
+}
+.pp-nav-links .pp-nav-link:hover {
   color: var(--pp-dark);
   background: var(--pp-teal-pale);
 }
@@ -226,7 +229,7 @@
   border: 1.5px solid var(--pp-dark);
   padding: 7.5px 18px;
 }
-.pp-btn--register:hover { background: var(--pp-teal-pale); }
+.pp-btn.pp-btn--register:hover { background: var(--pp-teal-pale); }
 .pp-nav-btns {
   display: flex;
   gap: 0.5rem;
@@ -274,14 +277,14 @@
   z-index: 2;
   position: relative;
 }
-.pp-hero-title {
+.pp-hero-left > .pp-hero-title {
   font-size: clamp(2.2rem, 3.5vw, 3.4rem);
   font-weight: 800;
   line-height: 1.22;
   color: var(--pp-text);
   margin-bottom: 1.2rem;
 }
-.pp-hero-sub {
+.pp-hero-left > .pp-hero-sub {
   font-size: 0.95rem;
   color: var(--pp-text-light);
   line-height: 1.75;
@@ -400,6 +403,7 @@
   border-radius: 62% 38% 55% 45% / 52% 58% 42% 48%;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(29,92,107,0.22);
+  background: var(--pp-about-blob);
 }
 .pp-hero-photo {
   width: 100%;
@@ -607,14 +611,14 @@
 }
 .pp-about-paw-accent svg { display: block; width: 100%; }
 
-.pp-about-quote {
+.pp-about-text > .pp-about-quote {
   font-size: clamp(1.6rem, 2.5vw, 2.1rem);
   font-weight: 800;
   line-height: 1.35;
   color: var(--pp-text);
   margin-bottom: 1.5rem;
 }
-.pp-about-desc {
+.pp-about-text > .pp-about-desc {
   font-size: 0.92rem;
   color: var(--pp-text-light);
   line-height: 1.85;
