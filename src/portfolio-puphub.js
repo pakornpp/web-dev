@@ -1,4 +1,7 @@
 import "./portfolio-puphub.css";
+import { initPortfolioRibbon } from "./portfolio-ribbon.js";
+
+initPortfolioRibbon(document.getElementById("portfolio-ribbon"));
 
 /* ── Nav scroll shadow ──────────────────────────────────── */
 const ppNav = document.getElementById("pp-nav");

@@ -1,3 +1,32 @@
+/* ─── Portfolio Ribbon ──────────────────────────────────────── */
+.ph-ribbon {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: var(--ph-green);
+  color: var(--ph-white);
+  font-family: var(--ph-font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.45rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.ph-ribbon .portfolio-ribbon__link { color: var(--ph-white); font-weight: 800; }
+.ph-ribbon .portfolio-ribbon__cta {
+  color: var(--ph-white);
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+}
+.ph-ribbon .portfolio-ribbon__cta:hover { background: rgba(255,255,255,0.15); }
+
 /* =========================================================
    CSS Custom Properties — Alex Monroe Photography
    ========================================================= */
@@ -26,6 +55,7 @@
   --ph-section-gap:  clamp(5rem, 10vw, 9rem);
 
   --ph-ease:         cubic-bezier(0.22, 0.61, 0.36, 1);
+  --ph-ribbon-h:     36px;
 }
 
 /* =========================================================
@@ -914,7 +944,7 @@ img { max-width: 100%; display: block; }
    Footer
    ========================================================= */
 .ph-footer {
-  padding: 2rem 0;
+  padding: 2rem 0 calc(2rem + var(--ph-ribbon-h));
   background: var(--ph-black);
   color: rgba(255,255,255,0.5);
 }

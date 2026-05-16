@@ -43,6 +43,13 @@
 .pc-body img { max-width: 100%; display: block; }
 .pc-body button { cursor: pointer; border: none; background: none; font: inherit; }
 
+/* ── Page wrapper (ultrawide centering) ──────────────────── */
+.pc-page {
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow-x: clip;
+}
+
 /* ── Container ────────────────────────────────────────────── */
 .pc-container {
   max-width: var(--pc-max);
@@ -70,10 +77,8 @@
   justify-content: center;
   gap: 0.6rem;
 }
-.pc-ribbon-link { font-weight: 700; color: #0d0d0d; }
-.pc-ribbon-link:hover { text-decoration: underline; }
-.pc-ribbon-sep { opacity: 0.4; }
-.pc-ribbon-cta {
+.pc-ribbon .portfolio-ribbon__link { color: #0d0d0d; }
+.pc-ribbon .portfolio-ribbon__cta {
   font-weight: 700;
   color: #0d0d0d;
   border-bottom: 1px solid rgba(13,13,13,0.4);

@@ -53,6 +53,13 @@
 .pp-body a  { text-decoration: none; color: inherit; }
 .pp-body ul { list-style: none; margin: 0; padding: 0; }
 
+/* ── Page wrapper (ultrawide centering) ───────────────── */
+.pp-page {
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow-x: clip;
+}
+
 /* ── Container ─────────────────────────────────────────── */
 .pp-container {
   max-width: var(--pp-max);
@@ -64,32 +71,31 @@
    RIBBON
    ═══════════════════════════════════════════════════════ */
 .pp-ribbon {
-  height: var(--pp-ribbon-h);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
   background: var(--pp-dark);
   color: rgba(255,255,255,0.75);
+  font-family: var(--pp-font);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.45rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  font-size: 0.8rem;
-  font-family: var(--pp-font);
 }
-.pp-ribbon-link {
-  color: var(--pp-yellow);
-  font-weight: 700;
-}
-.pp-ribbon-link:hover { text-decoration: underline; }
-.pp-ribbon-sep { opacity: 0.4; }
-.pp-ribbon-cta {
+.pp-ribbon .portfolio-ribbon__link { color: var(--pp-yellow); }
+.pp-ribbon .portfolio-ribbon__cta {
   color: white;
-  font-weight: 600;
   border: 1px solid rgba(255,255,255,0.3);
   padding: 2px 10px;
   border-radius: 20px;
   font-size: 0.75rem;
-  transition: background 0.2s;
 }
-.pp-ribbon-cta:hover { background: rgba(255,255,255,0.15); }
+.pp-ribbon .portfolio-ribbon__cta:hover { background: rgba(255,255,255,0.15); }
 
 /* ═══════════════════════════════════════════════════════
    NAVIGATION
@@ -209,12 +215,12 @@
   cursor: pointer;
   transition: all 0.2s;
 }
-.pp-btn--signin {
+.pp-btn.pp-btn--signin {
   background: var(--pp-dark);
   color: white;
 }
-.pp-btn--signin:hover { background: var(--pp-dark-hover); }
-.pp-btn--register {
+.pp-btn.pp-btn--signin:hover { background: var(--pp-dark-hover); }
+.pp-btn.pp-btn--register {
   background: transparent;
   color: var(--pp-dark);
   border: 1.5px solid var(--pp-dark);
@@ -228,7 +234,7 @@
 }
 
 /* ── Hero CTA button ──────────────────────────────────── */
-.pp-btn--hero {
+.pp-btn.pp-btn--hero {
   background: var(--pp-dark);
   color: white;
   padding: 13px 30px;
@@ -237,6 +243,7 @@
   text-transform: uppercase;
   border-radius: var(--pp-r);
   box-shadow: 0 4px 18px rgba(29,92,107,0.28);
+  max-width: 200px;
 }
 .pp-btn--hero:hover {
   background: var(--pp-dark-hover);
@@ -247,7 +254,7 @@
 /* ═══════════════════════════════════════════════════════
    HERO
    ═══════════════════════════════════════════════════════ */
-.pp-main { min-height: calc(100vh - var(--pp-nav-h) - var(--pp-ribbon-h)); }
+.pp-main { min-height: calc(100vh - var(--pp-nav-h)); }
 
 .pp-hero {
   display: grid;
@@ -619,7 +626,7 @@
    ═══════════════════════════════════════════════════════ */
 .pp-footer {
   background: var(--pp-dark);
-  padding: 2rem 0;
+  padding: 2rem 0 calc(2rem + var(--pp-ribbon-h));
   text-align: center;
   font-family: var(--pp-font);
   font-size: 0.85rem;
@@ -727,5 +734,5 @@
 @media (max-width: 400px) {
   .pp-services-grid { grid-template-columns: 1fr; }
   .pp-hero-photo-wrap { width: 220px; height: 220px; }
-  .pp-ribbon-cta { display: none; }
+  .pp-ribbon .portfolio-ribbon__cta { display: none; }
 }

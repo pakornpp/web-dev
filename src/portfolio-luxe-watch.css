@@ -41,6 +41,13 @@
 .lw-body ul { list-style: none; margin: 0; padding: 0; }
 .lw-body img { max-width: 100%; display: block; }
 
+/* ── Page wrapper (ultrawide centering) ──────────────────── */
+.lw-page {
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow-x: clip;
+}
+
 /* ── Container ────────────────────────────────────────────── */
 .lw-container {
   max-width: var(--lw-max);
@@ -68,10 +75,9 @@
   justify-content: center;
   gap: 0.6rem;
 }
-.lw-ribbon-link { font-weight: 700; color: #000; }
-.lw-ribbon-link:hover { text-decoration: underline; }
-.lw-ribbon-sep { opacity: 0.5; }
-.lw-ribbon-cta {
+.lw-ribbon .portfolio-ribbon__link { color: #000; }
+.lw-ribbon .portfolio-ribbon__sep { opacity: 0.5; }
+.lw-ribbon .portfolio-ribbon__cta {
   font-weight: 700;
   color: #000;
   border-bottom: 1px solid rgba(0,0,0,0.4);
