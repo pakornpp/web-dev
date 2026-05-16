@@ -138,6 +138,14 @@
 .pp-logo-pup { color: var(--pp-dark); }
 .pp-logo-hub { color: var(--pp-yellow-dark); }
 
+/* ── Nav collapse wrapper ─────────────────────────────── */
+.pp-nav-collapse {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 1.5rem;
+}
+
 /* ── Nav links ────────────────────────────────────────── */
 .pp-nav-links {
   display: flex;
@@ -146,6 +154,33 @@
   flex: 1;
   justify-content: center;
 }
+
+/* ── Hamburger button ──────────────────────────────────── */
+.pp-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.pp-hamburger span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--pp-text);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  transform-origin: center;
+}
+.pp-hamburger--open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+.pp-hamburger--open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.pp-hamburger--open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 .pp-nav-link {
   padding: 6px 11px;
   font-size: 0.82rem;
@@ -349,18 +384,24 @@
 .pp-blob-paw svg { display: block; }
 .pp-blob-paw--1 { width: 36px; bottom: 60px; right: 40px; transform: rotate(20deg); }
 
-/* ── Dog image (hero) ─────────────────────────────────── */
-.pp-dog-img {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200%;
-  max-width: 700px;
-  height: auto;
-  object-fit: contain;
-  z-index: 2;
+/* ── Hero photo in blob frame ─────────────────────────── */
+.pp-hero-photo-wrap {
+  position: relative;
+  width: 430px;
+  height: 430px;
+  flex-shrink: 0;
+  border-radius: 62% 38% 55% 45% / 52% 58% 42% 48%;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(29,92,107,0.22);
 }
+.pp-hero-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.pp-hero-photo-wrap:hover .pp-hero-photo { transform: scale(1.05); }
 
 /* ═══════════════════════════════════════════════════════
    SERVICES SECTION
@@ -396,35 +437,36 @@
   background: var(--pp-white);
   border: 1.5px solid var(--pp-card-border);
   border-radius: var(--pp-r-lg);
-  padding: 2.2rem 1.2rem 1.8rem;
+  padding: 0 0 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.1rem;
+  gap: 0.9rem;
+  overflow: hidden;
   cursor: default;
   transition: box-shadow 0.22s, border-color 0.22s, transform 0.22s;
 }
 .pp-svc-card:hover {
-  box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.09);
   border-color: var(--pp-dark);
   transform: translateY(-4px);
 }
 
-.pp-svc-icon {
-  width: 74px;
-  height: 74px;
-  border-radius: 50%;
-  background: var(--pp-teal-pale);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ── Service card photo ───────────────────────────────── */
+.pp-svc-img-wrap {
+  width: 100%;
+  height: 150px;
   flex-shrink: 0;
+  overflow: hidden;
 }
-.pp-svc-icon svg {
-  width: 42px;
-  height: 42px;
-  color: var(--pp-dark);
+.pp-svc-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
 }
+.pp-svc-card:hover .pp-svc-img { transform: scale(1.06); }
 
 .pp-svc-label {
   font-size: 0.85rem;
@@ -432,6 +474,7 @@
   color: var(--pp-text);
   text-align: center;
   line-height: 1.4;
+  padding: 0 1rem;
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -466,112 +509,28 @@
 }
 
 /* About section dog (sitting, different breed / simpler) */
-.pp-about-dog {
+.pp-about-photo-wrap {
   position: absolute;
-  bottom: 14px;
-  left: 48%;
-  transform: translateX(-50%);
-  width: 210px;
-  height: 270px;
-  z-index: 2;
-}
-.pp-ad-ear {
-  position: absolute;
-  width: 64px;
-  height: 88px;
-  background: #A86020;
-  z-index: 0;
-  top: 8px;
-}
-.pp-ad-ear--l {
-  border-radius: 50% 18% 22% 50%;
-  left: 2px;
-  transform: rotate(-10deg);
-}
-.pp-ad-ear--r {
-  border-radius: 18% 50% 50% 22%;
-  right: 2px;
-  transform: rotate(10deg);
-}
-.pp-ad-head {
-  position: absolute;
-  width: 170px;
-  height: 166px;
-  background: #C88028;
-  border-radius: 50%;
-  top: 0;
-  left: 20px;
-  z-index: 1;
-}
-/* Eyes */
-.pp-ad-eye {
-  position: absolute;
-  width: 20px;
-  height: 22px;
-  background: #18090A;
-  border-radius: 50%;
-  top: 56px;
-}
-.pp-ad-eye::after {
-  content: '';
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  background: white;
-  border-radius: 50%;
-  top: 3px;
-  left: 4px;
-}
-.pp-ad-eye--l { left:  34px; }
-.pp-ad-eye--r { right: 34px; }
-
-/* Snout */
-.pp-ad-snout {
-  position: absolute;
-  width: 74px;
-  height: 52px;
-  background: #DDB068;
-  border-radius: 50%;
   bottom: 14px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding-top: 9px;
+  width: 250px;
+  height: 300px;
+  z-index: 2;
+  border-radius: 50% 50% 42% 42%;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.14);
 }
-.pp-ad-nose {
-  width: 22px;
-  height: 13px;
-  background: var(--pp-dog-nose);
-  border-radius: 50%;
+.pp-about-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* Body */
-.pp-ad-body {
-  position: absolute;
-  width: 188px;
-  height: 130px;
-  background: #C88028;
-  border-radius: 50% 50% 30% 30% / 60% 60% 40% 40%;
-  bottom: -5px;
-  left: 11px;
-  z-index: 0;
-}
 
 /* Tail */
-.pp-ad-tail {
-  position: absolute;
-  width: 20px;
-  height: 64px;
-  background: #A86020;
-  border-radius: 40% 60% 60% 40%;
-  bottom: 48px;
-  right: 2px;
-  transform: rotate(32deg);
-  transform-origin: bottom center;
-  z-index: -1;
-}
 
 /* Paw print decorations on about blob */
 .pp-about-paw {
@@ -675,29 +634,98 @@
 /* ═══════════════════════════════════════════════════════
    RESPONSIVE
    ═══════════════════════════════════════════════════════ */
+
+/* ── Large tablet ─────────────────────────────────────── */
 @media (max-width: 1024px) {
   .pp-services-grid { grid-template-columns: repeat(3, 1fr); }
-  .pp-svc-card:nth-child(4),
-  .pp-svc-card:nth-child(5) { grid-column: span 1; }
 }
 
+/* ── Tablet / small laptop ────────────────────────────── */
 @media (max-width: 860px) {
+
+  /* Mobile nav */
+  .pp-hamburger { display: flex; }
+  .pp-nav-collapse {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--pp-white);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.75rem 1.5rem 1.25rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    border-top: 1px solid var(--pp-card-border);
+    gap: 0;
+    z-index: 99;
+  }
+  .pp-nav-collapse.pp-nav--open { display: flex; }
+  .pp-nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    justify-content: flex-start;
+  }
+  .pp-nav-link { padding: 10px 8px; width: 100%; }
+  .pp-nav-btns {
+    flex-direction: row;
+    width: 100%;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--pp-card-border);
+    margin-top: 0.5rem;
+  }
+
+  /* Hero */
   .pp-hero { grid-template-columns: 1fr; }
   .pp-hero-left {
-    padding: 4rem 2rem 2rem;
+    padding: 3.5rem 2rem 2rem;
     text-align: center;
     align-items: center;
   }
-  .pp-hero-right { min-height: 400px; }
-  .pp-blob-wrap { width: 340px; height: 340px; }
-  .pp-blob { width: 300px; height: 290px; }
+  .pp-hero-right {
+    min-height: 380px;
+    padding: 2rem 2rem 3rem;
+  }
+  .pp-hero-photo-wrap { width: 320px; height: 320px; }
+
+  /* Services */
+  .pp-services-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* About */
   .pp-about-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .pp-about-vis { height: 360px; }
-  .pp-nav-links { display: none; }
+  .pp-about-vis { height: 380px; }
+  .pp-about-blob { width: 290px; height: 290px; }
+  .pp-about-photo-wrap { width: 210px; height: 260px; }
 }
 
+/* ── Mobile ───────────────────────────────────────────── */
 @media (max-width: 600px) {
-  .pp-services-grid { grid-template-columns: repeat(2, 1fr); }
-  .pp-svc-card:last-child { grid-column: 1 / -1; }
-  .pp-nav-btns .pp-btn--register { display: none; }
+  .pp-container { padding: 0 1.25rem; }
+  .pp-ribbon { font-size: 0.72rem; gap: 0.3rem; }
+
+  /* Hero */
+  .pp-hero-left { padding: 2.5rem 1.25rem 1.5rem; }
+  .pp-hero-right { min-height: 290px; padding: 1.5rem 1rem 2.5rem; }
+  .pp-hero-photo-wrap { width: 260px; height: 260px; }
+  .pp-hero-title { font-size: clamp(1.9rem, 7vw, 2.6rem); }
+
+  /* Services */
+  .pp-services { padding: 3.5rem 0 4rem; }
+  .pp-services-grid { grid-template-columns: repeat(2, 1fr); gap: 0.9rem; }
+  .pp-svc-img-wrap { height: 120px; }
+
+  /* About */
+  .pp-about { padding: 4rem 0 4.5rem; }
+  .pp-about-vis { height: 330px; }
+  .pp-about-blob { width: 260px; height: 260px; }
+  .pp-about-photo-wrap { width: 190px; height: 230px; }
+  .pp-about-quote { font-size: 1.5rem; }
+}
+
+/* ── Small mobile ─────────────────────────────────────── */
+@media (max-width: 400px) {
+  .pp-services-grid { grid-template-columns: 1fr; }
+  .pp-hero-photo-wrap { width: 220px; height: 220px; }
+  .pp-ribbon-cta { display: none; }
 }

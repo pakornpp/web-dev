@@ -45,20 +45,30 @@
         </span>
       </a>
 
-      <!-- Nav links -->
-      <div class="pp-nav-links">
-        <a href="#services" class="pp-nav-link">บริการของเรา</a>
-        <a href="#about"    class="pp-nav-link">เกี่ยวกับเรา</a>
-        <a href="#products" class="pp-nav-link">สินค้า</a>
-        <a href="#care"     class="pp-nav-link">ดูแลสัตว์เลี้ยง</a>
-        <a href="#contact"  class="pp-nav-link">ติดต่อเรา</a>
-      </div>
+      <!-- Nav collapse (links + buttons, collapsible on mobile) -->
+      <div class="pp-nav-collapse" id="pp-nav-collapse">
 
-      <!-- Action buttons -->
-      <div class="pp-nav-btns">
-        <a href="#login"    class="pp-btn pp-btn--signin">เข้าสู่ระบบ</a>
-        <a href="#register" class="pp-btn pp-btn--register">สมัครสมาชิก</a>
-      </div>
+        <!-- Nav links -->
+        <div class="pp-nav-links">
+          <a href="#services" class="pp-nav-link">บริการของเรา</a>
+          <a href="#about"    class="pp-nav-link">เกี่ยวกับเรา</a>
+          <a href="#products" class="pp-nav-link">สินค้า</a>
+          <a href="#care"     class="pp-nav-link">ดูแลสัตว์เลี้ยง</a>
+          <a href="#contact"  class="pp-nav-link">ติดต่อเรา</a>
+        </div>
+
+        <!-- Action buttons -->
+        <div class="pp-nav-btns">
+          <a href="#login"    class="pp-btn pp-btn--signin">เข้าสู่ระบบ</a>
+          <a href="#register" class="pp-btn pp-btn--register">สมัครสมาชิก</a>
+        </div>
+
+      </div><!-- /.pp-nav-collapse -->
+
+      <!-- Hamburger (mobile only) -->
+      <button class="pp-hamburger" aria-label="เปิด/ปิดเมนู" aria-expanded="false" aria-controls="pp-nav-collapse">
+        <span></span><span></span><span></span>
+      </button>
 
     </div>
   </nav>
@@ -138,29 +148,14 @@
           </svg>
         </div>
 
-        <!-- Yellow blob + dog + badges -->
-        <div class="pp-blob-wrap">
+        <!-- Dog photo in organic blob frame -->
+        <div class="pp-hero-photo-wrap">
+          <img
+            src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=600&h=600&fit=crop&auto=format&q=80"
+            alt="Happy dog"
+            class="pp-hero-photo">
+        </div>
 
-          <!-- Yellow organic blob with bone pattern -->
-          <div class="pp-blob">
-            <div class="pp-bone pp-bone--1"></div>
-            <div class="pp-bone pp-bone--2"></div>
-            <div class="pp-bone pp-bone--3"></div>
-            <div class="pp-blob-paw pp-blob-paw--1">
-              <svg viewBox="0 0 24 24">
-                <ellipse cx="5.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
-                <ellipse cx="12" cy="4.5" rx="2.5" ry="3.2" fill="currentColor"/>
-                <ellipse cx="18.5" cy="7" rx="2.5" ry="3.2" fill="currentColor"/>
-                <ellipse cx="2.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
-                <ellipse cx="21.5" cy="12.5" rx="2" ry="2.8" fill="currentColor"/>
-                <path d="M12 10.5C6.5 10.5 4 13.5 4 17c0 2.8 2.5 4.5 8 4.5s8-1.7 8-4.5c0-3.5-2.5-6.5-8-6.5z" fill="currentColor"/>
-              </svg>
-            </div>
-          </div>
-
-          <img src="../assets/golden_retriever.png" alt="Golden Retriever" class="pp-dog-img">
-
-        </div><!-- /.pp-blob-wrap -->
       </div><!-- /.pp-hero-right -->
     </section>
 
@@ -179,106 +174,60 @@
 
           <!-- 1 · Grooming -->
           <div class="pp-svc-card">
-            <div class="pp-svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.2"
-                   stroke-linecap="round" stroke-linejoin="round">
-                <!-- groomer figure -->
-                <circle cx="26" cy="9" r="5.5"/>
-                <line x1="26" y1="14.5" x2="26" y2="30"/>
-                <line x1="26" y1="20"   x2="18" y2="30"/>
-                <line x1="26" y1="20"   x2="34" y2="28"/>
-                <line x1="26" y1="30"   x2="20" y2="44"/>
-                <line x1="26" y1="30"   x2="32" y2="44"/>
-                <!-- small dog -->
-                <circle cx="14" cy="33" r="4.5"/>
-                <path d="M11 33 C7 33 6 36 6 39"/>
-                <line x1="12" y1="37" x2="10" y2="44"/>
-                <line x1="16" y1="37" x2="18" y2="44"/>
-              </svg>
+            <div class="pp-svc-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1611173622933-91942d394b04?w=300&h=180&fit=crop&auto=format&q=80"
+                alt="Dog grooming"
+                class="pp-svc-img"
+                loading="lazy">
             </div>
             <p class="pp-svc-label">การตัดขน</p>
           </div>
 
           <!-- 2 · Healthcare -->
           <div class="pp-svc-card">
-            <div class="pp-svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.2"
-                   stroke-linecap="round">
-                <!-- bone shape -->
-                <rect x="14" y="21" width="24" height="10" rx="2"/>
-                <circle cx="12" cy="19.5" r="4.5"/>
-                <circle cx="12" cy="32.5" r="4.5"/>
-                <circle cx="40" cy="19.5" r="4.5"/>
-                <circle cx="40" cy="32.5" r="4.5"/>
-              </svg>
+            <div class="pp-svc-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1587764379873-97837921fd44?w=300&h=180&fit=crop&auto=format&q=80"
+                alt="Dog healthcare"
+                class="pp-svc-img"
+                loading="lazy">
             </div>
             <p class="pp-svc-label">การดูแลสุขภาพ</p>
           </div>
 
           <!-- 3 · Daycare -->
           <div class="pp-svc-card">
-            <div class="pp-svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.2"
-                   stroke-linecap="round" stroke-linejoin="round">
-                <!-- person crouching -->
-                <circle cx="20" cy="9" r="5.5"/>
-                <path d="M20 15 L18 27 L10 37"/>
-                <path d="M20 20 L30 28"/>
-                <path d="M18 27 L22 40"/>
-                <!-- dog -->
-                <circle cx="36" cy="30" r="5"/>
-                <path d="M32 35 L30 43"/>
-                <path d="M40 35 L42 43"/>
-                <path d="M32 25 C31 22 30 20 30 20"/>
-                <path d="M40 25 C41 22 42 20 42 20"/>
-              </svg>
+            <div class="pp-svc-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1561037404-61cd46aa615b?w=300&h=180&fit=crop&auto=format&q=80"
+                alt="Dog daycare"
+                class="pp-svc-img"
+                loading="lazy">
             </div>
             <p class="pp-svc-label">รับฝากสัตว์เลี้ยง</p>
           </div>
 
           <!-- 4 · Training -->
           <div class="pp-svc-card">
-            <div class="pp-svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.2"
-                   stroke-linecap="round" stroke-linejoin="round">
-                <!-- person walking -->
-                <circle cx="14" cy="8" r="5.5"/>
-                <line x1="14" y1="14" x2="14" y2="30"/>
-                <line x1="14" y1="19" x2="22" y2="26"/>
-                <line x1="14" y1="30" x2="9"  y2="44"/>
-                <line x1="14" y1="30" x2="19" y2="44"/>
-                <!-- leash -->
-                <path d="M22 26 Q34 18 40 28" fill="none"/>
-                <!-- dog -->
-                <circle cx="42" cy="27" r="5"/>
-                <path d="M38 32 L36 42"/>
-                <path d="M46 32 L48 42"/>
-                <path d="M39 22 C38 19 38 17 38 17"/>
-                <path d="M45 22 C46 19 46 17 46 17"/>
-              </svg>
+            <div class="pp-svc-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1586671267731-da2cf3ceeb80?w=300&h=180&fit=crop&auto=format&q=80"
+                alt="Dog training"
+                class="pp-svc-img"
+                loading="lazy">
             </div>
             <p class="pp-svc-label">ฝึกพฤติกรรม</p>
           </div>
 
           <!-- 5 · Hygienic care -->
           <div class="pp-svc-card">
-            <div class="pp-svc-icon" aria-hidden="true">
-              <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="2.2"
-                   stroke-linecap="round" stroke-linejoin="round">
-                <!-- person -->
-                <circle cx="20" cy="7" r="5.5"/>
-                <line x1="20" y1="13" x2="20" y2="24"/>
-                <line x1="20" y1="18" x2="30" y2="24"/>
-                <!-- bathtub -->
-                <rect x="22" y="28" width="24" height="14" rx="5"/>
-                <!-- dog head peeking from tub -->
-                <circle cx="34" cy="27" r="5"/>
-                <path d="M30 22 C29 19 28 18 28 18"/>
-                <path d="M38 22 C39 19 40 18 40 18"/>
-                <!-- water splashes -->
-                <circle cx="8"  cy="21" r="2"   fill="currentColor" stroke="none"/>
-                <circle cx="12" cy="15" r="1.5" fill="currentColor" stroke="none"/>
-              </svg>
+            <div class="pp-svc-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1566624790190-511a09f6ddbd?w=300&h=180&fit=crop&auto=format&q=80"
+                alt="Dog hygiene care"
+                class="pp-svc-img"
+                loading="lazy">
             </div>
             <p class="pp-svc-label">ดูแลความสะอาด</p>
           </div>
@@ -299,19 +248,13 @@
             <!-- blue blob -->
             <div class="pp-about-blob"></div>
 
-            <!-- sitting dog CSS art -->
-            <div class="pp-about-dog">
-              <div class="pp-ad-ear pp-ad-ear--l"></div>
-              <div class="pp-ad-ear pp-ad-ear--r"></div>
-              <div class="pp-ad-head">
-                <div class="pp-ad-eye pp-ad-eye--l"></div>
-                <div class="pp-ad-eye pp-ad-eye--r"></div>
-                <div class="pp-ad-snout">
-                  <div class="pp-ad-nose"></div>
-                </div>
-              </div>
-              <div class="pp-ad-body"></div>
-              <div class="pp-ad-tail"></div>
+            <!-- Real dog photo -->
+            <div class="pp-about-photo-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1534361960057-19889db9621e?w=480&h=520&fit=crop&auto=format&q=80"
+                alt="Happy dog"
+                class="pp-about-photo"
+                loading="lazy">
             </div>
 
             <!-- paw accents on blob -->
@@ -378,6 +321,26 @@
       <p>สร้างโดย <a href="index.html">Web4SME</a> · สงวนลิขสิทธิ์ © 2024 PUPHUB</p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var btn      = document.querySelector('.pp-hamburger');
+      var collapse = document.getElementById('pp-nav-collapse');
+      if (!btn || !collapse) return;
+      btn.addEventListener('click', function () {
+        var open = collapse.classList.toggle('pp-nav--open');
+        btn.classList.toggle('pp-hamburger--open', open);
+        btn.setAttribute('aria-expanded', String(open));
+      });
+      collapse.querySelectorAll('.pp-nav-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          collapse.classList.remove('pp-nav--open');
+          btn.classList.remove('pp-hamburger--open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
 
 </body>
 </html>
