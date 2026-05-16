@@ -7,19 +7,23 @@ const fadeEls = document.querySelectorAll(
 
 fadeEls.forEach((el) => el.classList.add("ph-fade-in"));
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.12 }
-);
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 }
+  );
 
-fadeEls.forEach((el) => observer.observe(el));
+  fadeEls.forEach((el) => observer.observe(el));
+} else {
+  fadeEls.forEach((el) => el.classList.add("is-visible"));
+}
 
 // ─── Work list — stagger fade-in ─────────────────────────────────────────────
 const workItems = document.querySelectorAll(".ph-work-item");
