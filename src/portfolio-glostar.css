@@ -46,7 +46,7 @@
 .gs-body h3,
 .gs-body h4 { margin: 0; line-height: 1.1; }
 
-.gs-body p   { margin: 0; }
+/* .gs-body p   { margin: 0; } */
 .gs-body a   { text-decoration: none; color: inherit; }
 .gs-body ul  { list-style: none; margin: 0; padding: 0; }
 .gs-body img { max-width: 100%; display: block; }
@@ -98,49 +98,49 @@
 .gs-btn:hover  { transform: translateY(-2px); }
 .gs-btn:active { transform: translateY(0); }
 
-.gs-btn--primary {
+.gs-btn.gs-btn--primary {
   background: var(--gs-yellow);
   color: var(--gs-black);
   border-color: var(--gs-yellow);
 }
-.gs-btn--primary:hover {
+.gs-btn.gs-btn--primary:hover {
   background: var(--gs-yellow-dark);
   border-color: var(--gs-yellow-dark);
   box-shadow: 0 6px 20px rgba(255, 224, 0, 0.45);
 }
 
-.gs-btn--dark {
+.gs-btn.gs-btn--dark {
   background: var(--gs-black);
   color: var(--gs-yellow);
   border-color: var(--gs-black);
 }
-.gs-btn--dark:hover {
+.gs-btn.gs-btn--dark:hover {
   background: var(--gs-dark);
   box-shadow: 0 6px 20px rgba(17, 17, 17, 0.25);
 }
 
-.gs-btn--ghost {
+.gs-btn.gs-btn--ghost {
   background: transparent;
   color: var(--gs-black);
   border-color: var(--gs-black);
 }
-.gs-btn--ghost:hover {
+.gs-btn.gs-btn--ghost:hover {
   background: var(--gs-black);
   color: var(--gs-yellow);
 }
 
-.gs-btn--yellow {
+.gs-btn.gs-btn--yellow {
   background: var(--gs-yellow);
   color: var(--gs-black);
   border-color: var(--gs-yellow);
 }
-.gs-btn--yellow:hover {
+.gs-btn.gs-btn--yellow:hover {
   background: var(--gs-yellow-dark);
   border-color: var(--gs-yellow-dark);
   box-shadow: 0 6px 20px rgba(255, 224, 0, 0.45);
 }
 
-.gs-btn--sm {
+.gs-btn.gs-btn--sm {
   font-size: 13px;
   padding: 10px 20px;
 }
@@ -205,13 +205,13 @@
   z-index: 200;
 }
 
-.gs-announce__link {
+.gs-announce .gs-announce__link {
   color: var(--gs-yellow);
   text-decoration: underline;
   text-underline-offset: 3px;
   transition: opacity 0.15s;
 }
-.gs-announce__link:hover { opacity: 0.75; }
+.gs-announce .gs-announce__link:hover { opacity: 0.75; }
 
 .gs-announce__close {
   position: absolute;
@@ -252,7 +252,7 @@
   gap: 32px;
 }
 
-.gs-nav__logo {
+.gs-nav .gs-nav__logo {
   font-size: 22px;
   font-weight: 900;
   color: var(--gs-black);
@@ -385,7 +385,7 @@
   padding-bottom: 64px;
 }
 
-.gs-hero__eyebrow {
+.gs-hero__text > .gs-hero__eyebrow {
   font-size: 14px;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -395,7 +395,7 @@
   margin-bottom: 18px;
 }
 
-.gs-hero__title {
+.gs-hero__text > .gs-hero__title {
   font-size: clamp(46px, 6vw, 82px);
   font-weight: 900;
   color: var(--gs-black);
@@ -404,7 +404,7 @@
   margin-bottom: 24px;
 }
 
-.gs-hero__glow {
+.gs-hero__title .gs-hero__glow {
   display: inline-block;
   background: var(--gs-white);
   border-radius: 14px;
@@ -413,7 +413,7 @@
   border: 2.5px solid var(--gs-black);
 }
 
-.gs-hero__sub {
+.gs-hero__text > .gs-hero__sub {
   font-size: 17px;
   font-weight: 600;
   color: var(--gs-black);
@@ -499,7 +499,7 @@
   transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 .gs-tab:hover   { border-color: var(--gs-black); }
-.gs-tab--active {
+.gs-tab.gs-tab--active {
   background: var(--gs-black);
   color: var(--gs-yellow);
   border-color: var(--gs-black);
@@ -546,8 +546,8 @@
   text-transform: lowercase;
   letter-spacing: 0.02em;
 }
-.gs-badge--new     { background: var(--gs-black); color: var(--gs-yellow); }
-.gs-badge--limited {
+.gs-badge.gs-badge--new     { background: var(--gs-black); color: var(--gs-yellow); }
+.gs-badge.gs-badge--limited {
   background: var(--gs-yellow);
   color: var(--gs-black);
   border: 1.5px solid var(--gs-black);
@@ -805,7 +805,7 @@
   padding-bottom: 64px;
 }
 
-.gs-footer__logo {
+.gs-container > .gs-footer__logo {
   font-size: 22px;
   font-weight: 900;
   color: var(--gs-yellow);
@@ -813,7 +813,7 @@
   margin-bottom: 10px;
 }
 
-.gs-footer__tagline {
+.gs-container > .gs-footer__tagline {
   color: rgba(255, 255, 255, 0.45);
   margin-bottom: 24px;
   font-size: 13px;
@@ -821,7 +821,7 @@
 
 .gs-footer__socials { display: flex; gap: 8px; }
 
-.gs-social-btn {
+.gs-footer .gs-social-btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -834,7 +834,7 @@
   transition: border-color 0.15s, color 0.15s;
   text-decoration: none;
 }
-.gs-social-btn:hover {
+.gs-footer .gs-social-btn:hover {
   border-color: var(--gs-yellow);
   color: var(--gs-yellow);
 }
