@@ -15,7 +15,7 @@ export function initNav(base = "") {
       <div class="nav-menu" id="nav-menu">
         <a href="${base ? base + "#work" : "#work"}">Work</a>
         <a href="${base ? base + "#pricing" : "#pricing"}">Pricing</a>
-        <a href="${base ? base + "#contact" : "#contact"}">Contact</a>
+        <a href="contact.html">Contact</a>
         <a href="about.html">About</a>
       </div>
       <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
@@ -28,7 +28,6 @@ export function initNav(base = "") {
         <button data-lang-btn="en" onclick="window.setLanguage('en')">EN</button>
         <button data-lang-btn="th" onclick="window.setLanguage('th')">ไทย</button>
       </div>
-      <a class="btn btn-nav nav-cta" href="${base ? base + "#contact" : "#contact"}">Start a project</a>
     </div>
   `;
 
