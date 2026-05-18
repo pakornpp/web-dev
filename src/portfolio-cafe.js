@@ -1,4 +1,7 @@
 import "./portfolio-cafe.css";
+import { initPortfolioRibbon } from "./portfolio-ribbon.js";
+
+initPortfolioRibbon(document.getElementById("portfolio-ribbon"));
 
 /* ── Nav transparency on scroll ─────────────────────────── */
 const pcNav = document.getElementById("pc-nav");

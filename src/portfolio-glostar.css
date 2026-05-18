@@ -24,6 +24,7 @@
   --gs-radius-xl:    32px;
   --gs-shadow:       0 4px 24px rgba(17, 17, 17, 0.08);
   --gs-shadow-card:  6px 6px 0 var(--gs-black);
+  --gs-ribbon-h:     36px;
 }
 
 /* ── Base ────────────────────────────────────────────────── */
@@ -159,6 +160,32 @@
   color: var(--gs-black);
 }
 .gs-icon-btn:hover { background: rgba(17, 17, 17, 0.10); }
+
+/* ── Portfolio Ribbon ─────────────────────────────────────── */
+.gs-ribbon {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  background: var(--gs-yellow);
+  color: var(--gs-black);
+  font-family: var(--gs-font);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.45rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.gs-ribbon .portfolio-ribbon__link { color: var(--gs-black); }
+.gs-ribbon .portfolio-ribbon__cta {
+  font-weight: 700;
+  color: var(--gs-black);
+  border-bottom: 1px solid rgba(17,17,17,0.4);
+}
 
 /* ── Announcement Bar ────────────────────────────────────── */
 .gs-announce {
@@ -767,6 +794,7 @@
   color: rgba(255, 255, 255, 0.65);
   font-size: 14px;
   font-weight: 600;
+  padding-bottom: var(--gs-ribbon-h);
 }
 
 .gs-footer__top {

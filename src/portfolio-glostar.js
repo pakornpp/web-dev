@@ -1,4 +1,7 @@
 import "./portfolio-glostar.css";
+import { initPortfolioRibbon } from "./portfolio-ribbon.js";
+
+initPortfolioRibbon(document.getElementById("portfolio-ribbon"));
 
 /* ── Announcement bar close ──────────────────────────────── */
 const announceEl = document.getElementById("gs-announce");

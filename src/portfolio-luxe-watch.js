@@ -1,4 +1,7 @@
 import "./portfolio-luxe-watch.css";
+import { initPortfolioRibbon } from "./portfolio-ribbon.js";
+
+initPortfolioRibbon(document.getElementById("portfolio-ribbon"));
 
 /* ── Live clock hands ──────────────────────────────────────── */
 function tickClock() {

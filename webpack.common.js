@@ -1,7 +1,7 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-// import CopyWebpackPlugin from "copy-webpack-plugin";
+import CopyWebpackPlugin from "copy-webpack-plugin";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -18,7 +18,7 @@ export default {
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
-    assetModuleFilename: "[path][name][ext]",
+    assetModuleFilename: (pathData) => pathData.filename.replace(/^src\//, ""),
     clean: true,
   },
   module: {
@@ -30,6 +30,9 @@ export default {
       {
         test: /\.html$/i,
         loader: "html-loader",
+        options: {
+          sources: false,
+        },
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|webp)$/i,
@@ -77,11 +80,10 @@ export default {
       filename: "portfolio-photographer.html",
       chunks: ["portfolio-photographer"],
     }),
-    // Uncomment and add patterns when you have static files to copy:
-    // new CopyWebpackPlugin({
-    //   patterns: [
-    //     { from: "src/robots.txt", to: "robots.txt" },
-    //   ],
-    // }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: "src/assets", to: "assets" },
+      ],
+    }),
   ],
 };

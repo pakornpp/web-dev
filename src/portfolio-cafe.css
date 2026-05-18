@@ -43,6 +43,13 @@
 .pc-body img { max-width: 100%; display: block; }
 .pc-body button { cursor: pointer; border: none; background: none; font: inherit; }
 
+/* ── Page wrapper (ultrawide centering) ──────────────────── */
+.pc-page {
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow-x: clip;
+}
+
 /* ── Container ────────────────────────────────────────────── */
 .pc-container {
   max-width: var(--pc-max);
@@ -70,10 +77,8 @@
   justify-content: center;
   gap: 0.6rem;
 }
-.pc-ribbon-link { font-weight: 700; color: #0d0d0d; }
-.pc-ribbon-link:hover { text-decoration: underline; }
-.pc-ribbon-sep { opacity: 0.4; }
-.pc-ribbon-cta {
+.pc-ribbon .portfolio-ribbon__link { color: #0d0d0d; }
+.pc-ribbon .portfolio-ribbon__cta {
   font-weight: 700;
   color: #0d0d0d;
   border-bottom: 1px solid rgba(13,13,13,0.4);
@@ -126,7 +131,7 @@
   color: var(--pc-text);
   text-decoration: none;
 }
-.pc-nav-btn {
+.pc-nav-right > .pc-nav-btn {
   font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.12em;
@@ -136,7 +141,7 @@
   padding: 0.5rem 1.25rem;
   transition: background 0.2s, color 0.2s;
 }
-.pc-nav-btn:hover {
+.pc-nav-right > .pc-nav-btn:hover {
   background: var(--pc-gold-light);
   color: var(--pc-bg);
 }
@@ -153,11 +158,11 @@
   transition: background 0.2s, color 0.2s, border-color 0.2s;
   white-space: nowrap;
 }
-.pc-btn--primary {
+.pc-btn.pc-btn--primary {
   background: var(--pc-text);
   color: var(--pc-bg);
 }
-.pc-btn--primary:hover {
+.pc-btn.pc-btn--primary:hover {
   background: var(--pc-gold-light);
   color: var(--pc-bg);
 }
@@ -234,7 +239,7 @@
   font-style: italic;
   font-weight: 400;
 }
-.pc-hero-sub {
+.pc-hero-content > .pc-hero-sub {
   font-size: 1rem;
   color: var(--pc-text-mid);
   line-height: 1.7;
@@ -321,7 +326,7 @@
   font-weight: 400;
   color: var(--pc-gold-light);
 }
-.pc-section-sub {
+.pc-section-header > .pc-section-sub {
   font-size: 0.9375rem;
   color: var(--pc-text-mid);
   max-width: 460px;
@@ -630,7 +635,8 @@
   display: block;
 }
 .pc-visit-cta { text-align: center; }
-.pc-visit-note {
+
+.pc-visit-cta > .pc-visit-note {
   font-size: 0.8125rem;
   color: var(--pc-text-muted);
   letter-spacing: 0.04em;

@@ -1,4 +1,7 @@
 import "./portfolio-photographer.css";
+import { initPortfolioRibbon } from "./portfolio-ribbon.js";
+
+initPortfolioRibbon(document.getElementById("portfolio-ribbon"));
 
 // ─── Intersection Observer — fade-in on scroll ───────────────────────────────
 const fadeEls = document.querySelectorAll(

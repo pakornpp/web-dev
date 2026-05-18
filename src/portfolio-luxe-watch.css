@@ -41,6 +41,13 @@
 .lw-body ul { list-style: none; margin: 0; padding: 0; }
 .lw-body img { max-width: 100%; display: block; }
 
+/* ── Page wrapper (ultrawide centering) ──────────────────── */
+.lw-page {
+  max-width: 1600px;
+  margin: 0 auto;
+  overflow-x: clip;
+}
+
 /* ── Container ────────────────────────────────────────────── */
 .lw-container {
   max-width: var(--lw-max);
@@ -68,10 +75,9 @@
   justify-content: center;
   gap: 0.6rem;
 }
-.lw-ribbon-link { font-weight: 700; color: #000; }
-.lw-ribbon-link:hover { text-decoration: underline; }
-.lw-ribbon-sep { opacity: 0.5; }
-.lw-ribbon-cta {
+.lw-ribbon .portfolio-ribbon__link { color: #000; }
+.lw-ribbon .portfolio-ribbon__sep { opacity: 0.5; }
+.lw-ribbon .portfolio-ribbon__cta {
   font-weight: 700;
   color: #000;
   border-bottom: 1px solid rgba(0,0,0,0.4);
@@ -389,11 +395,12 @@
   font-style: italic;
   color: var(--lw-gold-light);
 }
-.lw-hero-sub {
+.lw-body .lw-hero-sub {
   font-size: 0.9rem;
   line-height: 1.8;
   color: var(--lw-muted);
   max-width: 400px;
+  margin-top: 2.5rem;
   margin-bottom: 2.5rem;
   letter-spacing: 0.02em;
 }
@@ -801,7 +808,7 @@
   font-style: italic;
   color: var(--lw-gold-light);
 }
-.lw-parallax-body {
+.lw-parallax-content > .lw-parallax-body {
   font-size: 0.9rem;
   color: var(--lw-muted);
   line-height: 1.9;
@@ -910,13 +917,13 @@
   font-style: italic;
   color: var(--lw-gold-light);
 }
-.lw-acquire-sub {
+.lw-acquire-inner > .lw-acquire-sub {
   font-size: 0.88rem;
   line-height: 1.9;
   color: var(--lw-muted);
   margin-bottom: 2.5rem;
 }
-.lw-acquire-note {
+.lw-acquire-inner > .lw-acquire-note {
   margin-top: 1.25rem;
   font-size: 0.65rem;
   letter-spacing: 0.1em;

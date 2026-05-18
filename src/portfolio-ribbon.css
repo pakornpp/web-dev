@@ -1,0 +1,14 @@
+/* =========================================================
+   Shared inner-element styles for all portfolio ribbons.
+   Container layout and colours are defined per-page.
+   ========================================================= */
+
+.portfolio-ribbon__link {
+  font-weight: 700;
+}
+.portfolio-ribbon__link:hover { text-decoration: underline; }
+.portfolio-ribbon__sep { opacity: 0.4; }
+.portfolio-ribbon__cta {
+  font-weight: 600;
+  transition: background 0.2s;
+}
