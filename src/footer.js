@@ -12,12 +12,11 @@ export function initFooter(base = "") {
     <div class="footer-inner">
       <div class="footer-brand">
         <a href="${base || "index.html"}" class="footer-logo-link">
-          <div class="footer-logo-dot"></div>
-          <span class="footer-logo-name">Web4SME</span>
+          <span class="logo-name">Web<span class="gradient-text">Express</span><sup>TH</sup></span>
         </a>
-        <p class="footer-tagline" data-i18n="footer.tagline">Building the web's next great startups.</p>
+        <p class="footer-tagline" data-i18n="footer.tagline">ยกระดับธุรกิจของคุณบน โลกออนไลน์</p>
       </div>
-      <p class="footer-copy">&copy; ${year} Web4SME. All rights reserved.</p>
+      <p class="footer-copy">&copy; ${year} WebExpressTH. All rights reserved.</p>
     </div>
   `;
 }

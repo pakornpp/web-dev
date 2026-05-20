@@ -27,7 +27,7 @@ if (form) {
       `Name: ${name}\nContact (email / LINE): ${contact}\n\nMessage:\n${message}`
     );
 
-    window.location.href = `mailto:hello@web4sme.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:hello@webexpressth.com?subject=${subject}&body=${body}`;
 
     form.querySelector(".contact-form-success").hidden = false;
     form.reset();

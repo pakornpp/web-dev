@@ -9,8 +9,7 @@ export function initNav(base = "") {
   nav.innerHTML = `
     <div class="nav-inner">
       <a href="${base || "index.html"}" class="logo-container">
-        <div class="logo-dot"></div>
-        <span class="logo-name">Web4SME</span>
+        <span class="logo-name">Web<span class="gradient-text">Express</span><sup>TH</sup></span>
       </a>
       <div class="nav-menu" id="nav-menu">
         <a href="${base ? base + "#work" : "#work"}">Work</a>
