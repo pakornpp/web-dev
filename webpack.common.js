@@ -9,6 +9,7 @@ export default {
   entry: {
     main: "./src/index.js",
     about: "./src/about.js",
+    contact: "./src/contact.js",
     "portfolio-luxe-watch": "./src/portfolio-luxe-watch.js",
     "portfolio-cafe":      "./src/portfolio-cafe.js",
     "portfolio-puphub":    "./src/portfolio-puphub.js",
@@ -54,6 +55,11 @@ export default {
       template: "./src/about.html",
       filename: "about.html",
       chunks: ["about"],
+    }),
+    new HtmlWebpackPlugin({
+      template: "./src/contact.html",
+      filename: "contact.html",
+      chunks: ["contact"],
     }),
     new HtmlWebpackPlugin({
       template: "./src/portfolio-luxe-watch.html",
