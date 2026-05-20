@@ -2090,6 +2090,14 @@ footer {
   border-color: var(--color-primary);
 }
 
+.contact-channel-card:focus-visible {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
 .contact-channel-icon {
   width: 56px;
   height: 56px;
