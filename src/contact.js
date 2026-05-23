@@ -15,9 +15,12 @@ initLanguage().then(() => {
 });
 
 // ── Contact form ──────────────────────────────────────────
+// Replace YOUR_FORM_ID with the ID from your Formspree dashboard.
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xwvzqoje";
+
 const form = document.getElementById("contact-form");
 if (form) {
-  form.addEventListener("submit", (e) => {
+  form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const name    = form.querySelector('[name="name"]').value.trim();
@@ -26,14 +29,24 @@ if (form) {
 
     if (!name || !contact || !message) return;
 
-    const subject = encodeURIComponent(`Project enquiry from ${name}`);
-    const body    = encodeURIComponent(
-      `Name: ${name}\nContact (email / LINE): ${contact}\n\nMessage:\n${message}`
-    );
+    const submitBtn = form.querySelector('[type="submit"]');
+    submitBtn.disabled = true;
 
-    window.location.href = `mailto:hello@webexpressth.com?subject=${subject}&body=${body}`;
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
 
-    form.querySelector(".contact-form-success").hidden = false;
-    form.reset();
+      if (res.ok) {
+        form.querySelector(".contact-form-success").hidden = false;
+        form.reset();
+      } else {
+        submitBtn.disabled = false;
+      }
+    } catch {
+      submitBtn.disabled = false;
+    }
   });
 }
