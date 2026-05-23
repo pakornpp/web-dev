@@ -38,6 +38,8 @@
   "pricing.ecommerce.feature.cart": "Cart &amp; Checkout",
   "pricing.ecommerce.feature.stock": "Stock management",
   "pricing.ecommerce.feature.backend": "Backend management",
+  "pricing.ecommerce.from": "Price",
+  "pricing.ecommerce.price": "Contact us",
   "pricing.feature.common.ref": "+ All common features",
   "pricing.common.label": "All packages include",
   "pricing.common.design": "Custom Design",
