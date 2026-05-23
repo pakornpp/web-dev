@@ -8,9 +8,8 @@ window.setLanguage = setLanguage;
 
 initNav("index.html");
 initFooter("index.html");
-initLanguage().finally(() => {
+initLanguage().then(() => {
   const loader = document.getElementById("page-loader");
-  if (!loader) return;
   loader.classList.add("is-hidden");
   loader.addEventListener("transitionend", () => loader.remove(), { once: true });
 });

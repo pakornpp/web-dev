@@ -94,7 +94,6 @@ export default {
       patterns: [
         { from: "src/assets", to: "assets" },
         { from: "src/CNAME", to: "CNAME", toType: "file" },
-        { from: "src/.nojekyll", to: ".nojekyll", toType: "file" },
       ],
     }),
   ],

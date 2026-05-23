@@ -10,9 +10,8 @@ window.setLanguage = setLanguage;
 initNav("");
 initFooter("");
 initCtaBanner();
-initLanguage().finally(() => {
+initLanguage().then(() => {
   const loader = document.getElementById("page-loader");
-  if (!loader) return;
   loader.classList.add("is-hidden");
   loader.addEventListener("transitionend", () => loader.remove(), { once: true });
 });
