@@ -93,6 +93,7 @@ export default {
     new CopyWebpackPlugin({
       patterns: [
         { from: "src/assets", to: "assets" },
+        { from: "src/CNAME", to: "CNAME", toType: "file" },
       ],
     }),
   ],
