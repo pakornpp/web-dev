@@ -19,5 +19,9 @@ export default merge(common, {
     // "auto" generates relative URLs so assets resolve correctly regardless
     // of the deployment sub-path (e.g. GitHub Pages /web-dev/).
     publicPath: "auto",
+    // Content hash in chunk filenames prevents stale-cache issues after re-deploys:
+    // a cached main.js referencing old chunks would 404 without this, silently
+    // breaking the dynamic locale import and leaving the spinner stuck forever.
+    chunkFilename: "[id].[contenthash:8].js",
   },
 });
