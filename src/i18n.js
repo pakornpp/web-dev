@@ -28,8 +28,8 @@ export async function setLanguage(lang) {
  * and applies it. Call this once on page load.
  */
 export function initLanguage() {
-  const saved = localStorage.getItem("lang") ?? "en";
-  setLanguage(saved);
+  const saved = localStorage.getItem("lang") ?? "th";
+  return setLanguage(saved);
 }
 
 /** Look up a translation key. Returns the key itself when missing. */

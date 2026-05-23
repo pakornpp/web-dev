@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
   <meta charset="UTF-8">
@@ -12,12 +12,14 @@
   <meta property="og:url" content="https://www.webexpressth.com/about.html">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://www.webexpressth.com/about.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <div id="page-loader" aria-hidden="true">
+    <div class="page-loader__ring"></div>
+    <span class="page-loader__wordmark">WebExpressTH</span>
+  </div>
+
   <nav></nav>
 
   <main>
@@ -29,7 +31,7 @@
       <div class="container">
         <div class="profile-hero-inner">
           <div class="profile-photo-wrap">
-            <img src="assets/pakorn.png" alt="Pakorn — Chartered Professional Engineer" class="profile-photo">
+            <img src="assets/pakorn.webp" alt="Pakorn — Chartered Professional Engineer" class="profile-photo">
           </div>
           <div class="profile-info">
             <h1 class="profile-name" data-i18n="about.hero.name">ปกรณ์ โภคสวัสดิ์</h1>
@@ -72,14 +74,7 @@
     </section>
 
     <!-- ── CTA ───────────────────────────────────────────── -->
-    <section class="cta-section">
-      <div class="container">
-        <div class="cta-inner">
-          <h2 class="cta-title" data-i18n="cta.title">พร้อมสร้างเว็บไซต์หรือยัง?</h2>
-          <a class="btn btn-accent" href="mailto:hello@webexpressth.com" data-i18n="cta.button">ติดต่อเรา →</a>
-        </div>
-      </div>
-    </section>
+    <section class="cta-section" data-component="cta-banner"></section>
 
   </main>
 

@@ -25,10 +25,6 @@ export default {
   module: {
     rules: [
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-      {
         test: /\.html$/i,
         loader: "html-loader",
         options: {
@@ -50,41 +46,49 @@ export default {
       template: "./src/index.html",
       filename: "index.html",
       chunks: ["main"],
+      scriptLoading: "defer",
     }),
     new HtmlWebpackPlugin({
       template: "./src/about.html",
       filename: "about.html",
       chunks: ["about"],
+      scriptLoading: "defer",
     }),
     new HtmlWebpackPlugin({
       template: "./src/contact.html",
       filename: "contact.html",
       chunks: ["contact"],
+      scriptLoading: "defer",
     }),
     new HtmlWebpackPlugin({
       template: "./src/portfolio-luxe-watch.html",
       filename: "portfolio-luxe-watch.html",
       chunks: ["portfolio-luxe-watch"],
+      scriptLoading: "defer",
     }),
     new HtmlWebpackPlugin({
       template: "./src/portfolio-cafe.html",
       filename: "portfolio-cafe.html",
       chunks: ["portfolio-cafe"],
+      scriptLoading: "defer",
     }),
     new HtmlWebpackPlugin({
       template: "./src/portfolio-puphub.html",
       filename: "portfolio-puphub.html",
       chunks: ["portfolio-puphub"],
+      scriptLoading: "defer",
     }),
     new HtmlWebpackPlugin({
       template: "./src/portfolio-glostar.html",
       filename: "portfolio-glostar.html",
       chunks: ["portfolio-glostar"],
+      scriptLoading: "defer",
     }),
     new HtmlWebpackPlugin({
       template: "./src/portfolio-photographer.html",
       filename: "portfolio-photographer.html",
       chunks: ["portfolio-photographer"],
+      scriptLoading: "defer",
     }),
     new CopyWebpackPlugin({
       patterns: [

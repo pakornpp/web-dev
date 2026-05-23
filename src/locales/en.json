@@ -3,7 +3,7 @@
   "about.page.title": "About — Pakorn",
   "hero.title": "Elevate your business <span class=\"gradient-text\">online</span>",
   "hero.subtitle": "WebExpressTH is a small studio building modern, fast, and unmistakably crafted websites for ambitious businesses.",
-  "hero.cta.primary": "Start a project →",
+  "hero.cta.primary": "View packages →",
   "hero.cta.secondary": "See our work",
   "work.title": "Recent launches",
   "work.description": "A glimpse at sites we've shipped.",
@@ -23,7 +23,7 @@
   "pricing.eyebrow": "PACKAGES",
   "pricing.title": "Simple, transparent pricing",
   "pricing.subtitle": "Pick a tier — or talk to us about a custom scope.",
-  "pricing.popular": "Most popular",
+  "pricing.popular": "Recommended",
   "pricing.cta": "Get started",
   "pricing.from": "Starting from",
   "pricing.single.desc": "A polished landing page to get you live, fast.",
@@ -38,6 +38,8 @@
   "pricing.ecommerce.feature.cart": "Cart &amp; Checkout",
   "pricing.ecommerce.feature.stock": "Stock management",
   "pricing.ecommerce.feature.backend": "Backend management",
+  "pricing.ecommerce.from": "Price",
+  "pricing.ecommerce.price": "Contact us",
   "pricing.feature.common.ref": "+ All common features",
   "pricing.common.label": "All packages include",
   "pricing.common.design": "Custom Design",
@@ -82,5 +84,9 @@
   "contact.form.message.label": "Message",
   "contact.form.message.placeholder": "Tell us about your project...",
   "contact.form.submit": "Send message →",
-  "contact.form.success": "Thanks! We'll be in touch within one business day."
+  "contact.form.success": "Thanks! We'll be in touch within one business day.",
+  "nav.home": "Home",
+  "nav.pricing": "Pricing",
+  "nav.contact": "Contact",
+  "nav.about": "About"
 }

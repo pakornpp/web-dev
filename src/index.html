@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 
 <head>
   <meta charset="UTF-8">
@@ -13,12 +13,14 @@
   <meta property="og:url" content="https://www.webexpressth.com">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://www.webexpressth.com">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <div id="page-loader" aria-hidden="true">
+    <div class="page-loader__ring"></div>
+    <span class="page-loader__wordmark">WebExpressTH</span>
+  </div>
+
   <nav></nav>
 
   <main>
@@ -30,10 +32,10 @@
           ยกระดับธุรกิจของคุณบน <span class="gradient-text">โลกออนไลน์</span>
         </h1>
         <p class="hero-subtitle" data-i18n="hero.subtitle">
-          WebExpressTH คือสตูดิโอขนาดเล็กที่สร้างเว็บไซต์ที่ทันสมัย รวดเร็ว และน่าเชื่อถือ เหมาะสำหรับบริษัทที่ต้องการเติบโต
+          WebExpressTH คือสตูดิโอขนาดเล็กที่สร้างเว็บไซต์ที่ทันสมัย รวดเร็ว เหมาะสำหรับบริษัทที่ต้องการเติบโต
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#pricing" data-i18n="hero.cta.primary">เริ่มโปรเจกต์ →</a>
+          <a class="btn btn-primary" href="#pricing" data-i18n="hero.cta.primary">ดูแพ็กเกจ →</a>
           <a class="btn btn-ghost" href="#work" data-i18n="hero.cta.secondary">ดูผลงาน</a>
         </div>
       </div>
@@ -46,9 +48,6 @@
           <div class="work-header-left">
             <h2 data-i18n="work.title">ผลงานล่าสุด</h2>
           </div>
-          <p class="work-description" data-i18n="work.description">
-            ตัวอย่างงานที่เราส่งมอบ
-          </p>
         </div>
 
         <div class="work-grid">
@@ -56,7 +55,7 @@
           <!-- Penta P -->
           <div class="work-card">
             <div class="work-card-image work-card-image--pentap">
-              <img src="assets/portfolio/pentap_hero.png" alt="Penta P Group website screenshot" class="work-card-img">
+              <img src="assets/portfolio/pentap_hero.webp" alt="Penta P Group website screenshot" class="work-card-img">
             </div>
             <div class="work-card-body">
               <p class="work-card-category" data-i18n="work.card.pentap.category">อสังหาริมทรัพย์</p>
@@ -69,7 +68,7 @@
           <!-- Tash P Food Photography -->
           <div class="work-card">
             <div class="work-card-image work-card-image--photographer">
-              <img src="assets/portfolio/photographer_hero.png" alt="Tash P Photography website screenshot" class="work-card-img">
+              <img src="assets/portfolio/photographer_hero.webp" alt="Tash P Photography website screenshot" class="work-card-img">
             </div>
             <div class="work-card-body">
               <p class="work-card-category" data-i18n="work.card.photographer.category">Portfolio งานส่วนตัว</p>
@@ -82,7 +81,7 @@
           <!-- AUREM Luxury Watch -->
           <div class="work-card">
             <div class="work-card-image work-card-image--luxewatch">
-              <img src="assets/portfolio/aurum_hero.png" alt="AUREM Timepieces website screenshot" class="work-card-img">
+              <img src="assets/portfolio/aurum_hero.webp" alt="AUREM Timepieces website screenshot" class="work-card-img">
             </div>
             <div class="work-card-body">
               <p class="work-card-category" data-i18n="work.card.luxewatch.category">E-Commerce</p>
@@ -95,7 +94,7 @@
           <!-- GLOSTAR Cosmetics -->
           <div class="work-card">
             <div class="work-card-image work-card-image--glostar">
-              <img src="assets/portfolio/glostar_hero.png" alt="GLOSTAR website screenshot" class="work-card-img">
+              <img src="assets/portfolio/glostar_hero.webp" alt="GLOSTAR website screenshot" class="work-card-img">
             </div>
             <div class="work-card-body">
               <p class="work-card-category" data-i18n="work.card.glostar.category">E-Commerce</p>
@@ -108,7 +107,7 @@
           <!-- TERROIR Café -->
           <div class="work-card">
             <div class="work-card-image work-card-image--cafe">
-              <img src="assets/portfolio/cafe_hero.png" alt="TERROIR Café website screenshot" class="work-card-img">
+              <img src="assets/portfolio/cafe_hero.webp" alt="TERROIR Café website screenshot" class="work-card-img">
             </div>
             <div class="work-card-body">
               <p class="work-card-category" data-i18n="work.card.cafe.category">ร้านอาหารและคาเฟ่</p>
@@ -121,7 +120,7 @@
           <!-- PUPHUB Pet Grooming -->
           <div class="work-card">
             <div class="work-card-image work-card-image--puphub">
-              <img src="assets/portfolio/puphub_hero.png" alt="PUPHUB website screenshot" class="work-card-img">
+              <img src="assets/portfolio/puphub_hero.webp" alt="PUPHUB website screenshot" class="work-card-img">
             </div>
             <div class="work-card-body">
               <p class="work-card-category" data-i18n="work.card.puphub.category">บริการสัตว์เลี้ยง</p>
@@ -159,7 +158,7 @@
               <li><span class="check-icon" style="--icon: url('/assets/icons/file-text.svg')"></span> <span data-i18n="pricing.single.feature.pages">1 แลนดิ้งเพจ</span></li>
               <li class="pricing-features-common-ref" data-i18n="pricing.feature.common.ref">+ ฟีเจอร์มาตรฐานทั้งหมด</li>
             </ul>
-            <a class="btn btn-dark pricing-btn" href="#contact" data-i18n="pricing.cta">เริ่มต้น</a>
+            <a class="btn btn-dark pricing-btn" href="contact.html" data-i18n="pricing.cta">เริ่มต้น</a>
           </div>
 
           <!-- Starter -->
@@ -176,12 +175,12 @@
               <li><span class="check-icon" style="--icon: url('/assets/icons/copy.svg')"></span> <span data-i18n="pricing.starter.feature.pages">1 ถึง 5 หน้า</span></li>
               <li class="pricing-features-common-ref" data-i18n="pricing.feature.common.ref">+ ฟีเจอร์มาตรฐานทั้งหมด</li>
             </ul>
-            <a class="btn btn-dark pricing-btn" href="#contact" data-i18n="pricing.cta">เริ่มต้น</a>
+            <a class="btn btn-dark pricing-btn" href="contact.html" data-i18n="pricing.cta">เริ่มต้น</a>
           </div>
 
           <!-- Standard (featured) -->
           <div class="pricing-card pricing-card--featured">
-            <div class="pricing-popular" data-i18n="pricing.popular">ยอดนิยม</div>
+            <div class="pricing-popular" data-i18n="pricing.popular">แนะนำ</div>
             <div class="pricing-card-header">
               <h3 class="pricing-name">Standard</h3>
               <p class="pricing-desc" data-i18n="pricing.standard.desc">เว็บไซต์หลายหน้าครบครันที่ออกแบบเฉพาะสำหรับแบรนด์ของคุณ</p>
@@ -195,7 +194,7 @@
               <li><span class="check-icon" style="--icon: url('/assets/icons/languages.svg')"></span> <span data-i18n="pricing.standard.feature.langs">2 ภาษา</span></li>
               <li class="pricing-features-common-ref" data-i18n="pricing.feature.common.ref">+ ฟีเจอร์มาตรฐานทั้งหมด</li>
             </ul>
-            <a class="btn btn-white pricing-btn" href="#contact" data-i18n="pricing.cta">เริ่มต้น</a>
+            <a class="btn btn-white pricing-btn" href="contact.html" data-i18n="pricing.cta">เริ่มต้น</a>
           </div>
 
           <!-- E-Commerce Package -->
@@ -205,8 +204,8 @@
               <p class="pricing-desc" data-i18n="pricing.ecommerce.desc">ร้านค้าออนไลน์ครบฟีเจอร์ พร้อมขายตั้งแต่วันแรก</p>
             </div>
             <div class="pricing-amount">
-              <span class="pricing-from" data-i18n="pricing.from">เริ่มต้นที่</span>
-              <span class="pricing-price">฿59,990</span>
+              <span class="pricing-from" data-i18n="pricing.ecommerce.from">ราคา</span>
+              <span class="pricing-price" data-i18n="pricing.ecommerce.price">ติดต่อเรา</span>
             </div>
             <ul class="pricing-features">
               <li><span class="check-icon" style="--icon: url('/assets/icons/shopping-bag.svg')"></span> <span data-i18n="pricing.ecommerce.feature.shop">อีคอมเมิร์ซครบครัน</span></li>
@@ -215,7 +214,7 @@
               <li><span class="check-icon" style="--icon: url('/assets/icons/server.svg')"></span> <span data-i18n="pricing.ecommerce.feature.backend">จัดการระบบหลังบ้าน</span></li>
               <li class="pricing-features-common-ref" data-i18n="pricing.feature.common.ref">+ ฟีเจอร์มาตรฐานทั้งหมด</li>
             </ul>
-            <a class="btn btn-dark pricing-btn" href="#contact" data-i18n="pricing.cta">เริ่มต้น</a>
+            <a class="btn btn-dark pricing-btn" href="contact.html" data-i18n="pricing.cta">เริ่มต้น</a>
           </div>
 
         </div>
@@ -238,14 +237,7 @@
     </section>
 
     <!-- ── CTA Banner ─────────────────────────────────────── -->
-    <section class="cta-section" id="contact">
-      <div class="container">
-        <div class="cta-inner">
-          <h2 class="cta-title" data-i18n="cta.title">พร้อมสร้างเว็บไซต์หรือยัง?</h2>
-          <a class="btn btn-accent" href="contact.html" data-i18n="cta.button">ติดต่อเรา →</a>
-        </div>
-      </div>
-    </section>
+    <section class="cta-section" id="contact" data-component="cta-banner"></section>
 
   </main>
 

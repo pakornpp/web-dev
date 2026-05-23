@@ -12,10 +12,10 @@ export function initNav(base = "") {
         <span class="logo-name">Web<span class="gradient-text">Express</span><sup>TH</sup></span>
       </a>
       <div class="nav-menu" id="nav-menu">
-        <a href="${base ? base + "#work" : "#work"}">Work</a>
-        <a href="${base ? base + "#pricing" : "#pricing"}">Pricing</a>
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a>
+        <a href="${base || "index.html"}" data-i18n="nav.home">Home</a>
+        <a href="${base ? base + "#pricing" : "#pricing"}" data-i18n="nav.pricing">Pricing</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
       </div>
       <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
         aria-label="Toggle navigation menu">
