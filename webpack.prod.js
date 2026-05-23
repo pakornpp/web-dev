@@ -4,8 +4,8 @@ import common from "./webpack.common.js";
 export default merge(common, {
   mode: "production",
   output: {
-    // Absolute path required so subdirectory pages resolve JS/CSS/images
-    // to the repo root rather than relative to their own directory.
-    publicPath: "/",
+    // "auto" generates relative URLs so assets resolve correctly regardless
+    // of the deployment sub-path (e.g. GitHub Pages /web-dev/).
+    publicPath: "auto",
   },
 });
