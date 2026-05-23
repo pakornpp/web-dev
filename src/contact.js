@@ -8,7 +8,11 @@ window.setLanguage = setLanguage;
 
 initNav("index.html");
 initFooter("index.html");
-initLanguage();
+initLanguage().then(() => {
+  const loader = document.getElementById("page-loader");
+  loader.classList.add("is-hidden");
+  loader.addEventListener("transitionend", () => loader.remove(), { once: true });
+});
 
 // ── Contact form ──────────────────────────────────────────
 const form = document.getElementById("contact-form");

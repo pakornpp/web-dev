@@ -29,7 +29,7 @@ export async function setLanguage(lang) {
  */
 export function initLanguage() {
   const saved = localStorage.getItem("lang") ?? "th";
-  setLanguage(saved);
+  return setLanguage(saved);
 }
 
 /** Look up a translation key. Returns the key itself when missing. */
