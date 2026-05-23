@@ -3,7 +3,7 @@
   "about.page.title": "เกี่ยวกับเรา — WebExpressTH",
   "hero.title": "ยกระดับธุรกิจของคุณบน <span class=\"gradient-text\">โลกออนไลน์</span>",
   "hero.subtitle": "WebExpressTH คือสตูดิโอขนาดเล็กที่สร้างเว็บไซต์ที่ทันสมัย รวดเร็ว และน่าเชื่อถือ เหมาะสำหรับบริษัทที่ต้องการเติบโต",
-  "hero.cta.primary": "เริ่มโปรเจกต์ →",
+  "hero.cta.primary": "ดูแพ็กเกจ →",
   "hero.cta.secondary": "ดูผลงาน",
   "work.title": "ผลงานล่าสุด",
   "work.description": "ตัวอย่างงานที่เราส่งมอบ",
@@ -23,7 +23,7 @@
   "pricing.eyebrow": "แพ็กเกจ",
   "pricing.title": "ราคาแพ็กเกจ",
   "pricing.subtitle": "เลือกแพ็กเกจที่เหมาะสม หรือติดต่อเราเพื่อขอใบเสนอราคาแบบกำหนดเอง",
-  "pricing.popular": "ยอดนิยม",
+  "pricing.popular": "แนะนำ",
   "pricing.cta": "เริ่มต้น",
   "pricing.from": "เริ่มต้นที่",
   "pricing.single.desc": "แลนดิ้งเพจที่สวยงาม เริ่มต้นออนไลน์ได้เร็ว",
@@ -70,7 +70,7 @@
   "contact.channel.facebook.label": "Facebook",
   "contact.channel.facebook.action": "ไปที่ Facebook →",
   "contact.channel.line.label": "LINE",
-  "contact.channel.line.action": "เพิ่มเพื่อน →",
+  "contact.channel.line.action": "แอดไลน์ →",
   "contact.channel.email.label": "อีเมล",
   "contact.channel.email.action": "ส่งอีเมล →",
   "contact.form.eyebrow": "ส่งข้อความ",
@@ -82,5 +82,9 @@
   "contact.form.message.label": "ข้อความ",
   "contact.form.message.placeholder": "เล่าให้เราฟังเกี่ยวกับโปรเจกต์ของคุณ...",
   "contact.form.submit": "ส่งข้อความ →",
-  "contact.form.success": "ขอบคุณ! เราจะติดต่อกลับภายในหนึ่งวันทำการ"
+  "contact.form.success": "ขอบคุณ! เราจะติดต่อกลับภายในหนึ่งวันทำการ",
+  "nav.home": "หน้าหลัก",
+  "nav.pricing": "แพ็กเกจ",
+  "nav.contact": "ติดต่อ",
+  "nav.about": "เกี่ยวกับเรา"
 }
