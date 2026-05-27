@@ -16,6 +16,7 @@ export function initNav(base = "") {
         <a href="${base ? base + "#pricing" : "#pricing"}" data-i18n="nav.pricing">Pricing</a>
         <a href="contact.html" data-i18n="nav.contact">Contact</a>
         <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="blog.html" data-i18n="nav.blog">บทความ</a>
       </div>
       <div class="lang-switcher">
         <button data-lang-btn="en" onclick="window.setLanguage('en')">EN</button>

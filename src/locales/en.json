@@ -88,5 +88,10 @@
   "nav.home": "Home",
   "nav.pricing": "Pricing",
   "nav.contact": "Contact",
-  "nav.about": "About"
+  "nav.about": "About",
+  "nav.blog": "Blog",
+  "blog.page.title": "Blog — WebExpressTH",
+  "blog.eyebrow": "BLOG",
+  "blog.title": "Web & Digital Marketing Insights",
+  "blog.subtitle": "In-depth articles on web development, SEO, and technology that helps your business grow online."
 }
