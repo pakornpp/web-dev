@@ -1824,7 +1824,18 @@ footer {
 
   .nav-cta { display: none; }
 
-  .mobile-menu-toggle { display: flex; }
+  .mobile-menu-toggle {
+    display: flex;
+    margin-left: 0;
+  }
+
+  .nav-inner {
+    gap: 0.5rem;
+  }
+
+  .lang-switcher {
+    margin-left: auto;
+  }
 
   .lang-switcher button {
     min-width: 40px;
