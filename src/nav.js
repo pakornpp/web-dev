@@ -17,16 +17,16 @@ export function initNav(base = "") {
         <a href="contact.html" data-i18n="nav.contact">Contact</a>
         <a href="about.html" data-i18n="nav.about">About</a>
       </div>
+      <div class="lang-switcher">
+        <button data-lang-btn="en" onclick="window.setLanguage('en')">EN</button>
+        <button data-lang-btn="th" onclick="window.setLanguage('th')">ไทย</button>
+      </div>
       <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="nav-menu"
         aria-label="Toggle navigation menu">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <div class="lang-switcher">
-        <button data-lang-btn="en" onclick="window.setLanguage('en')">EN</button>
-        <button data-lang-btn="th" onclick="window.setLanguage('th')">ไทย</button>
-      </div>
     </div>
   `;
 
