@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSL HTTPS คืออะไร ทำไมเว็บไซต์ทุกเจ้าต้องมี — WebExpressTH</title>
+  <meta name="description" content="SSL/HTTPS ปกป้องข้อมูลผู้ใช้งานและเพิ่มความน่าเชื่อถือของเว็บไซต์ Google ใช้ HTTPS เป็นปัจจัย SEO ranking มาตั้งแต่ปี 2014">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="WebExpressTH">
+  <meta property="og:title" content="SSL/HTTPS คืออะไร ทำไมเว็บไซต์ทุกเจ้าต้องมี">
+  <meta property="og:description" content="SSL/HTTPS ปกป้องข้อมูลผู้ใช้งานและเพิ่มความน่าเชื่อถือ Google ใช้ HTTPS เป็นปัจจัย SEO ranking">
+  <meta property="og:url" content="https://www.webexpressth.com/blog-ssl-https.html">
+  <meta property="og:image" content="https://www.webexpressth.com/assets/thumbnail.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://www.webexpressth.com/assets/thumbnail.webp">
+  <link rel="canonical" href="https://www.webexpressth.com/blog-ssl-https.html">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "SSL/HTTPS คืออะไร ทำไมเว็บไซต์ทุกเจ้าต้องมี",
+    "description": "SSL/HTTPS ปกป้องข้อมูลผู้ใช้งานและเพิ่มความน่าเชื่อถือ Google ใช้ HTTPS เป็นปัจจัย SEO ranking",
+    "datePublished": "2026-07-29",
+    "author": {
+      "@type": "Organization",
+      "name": "WebExpressTH",
+      "url": "https://www.webexpressth.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "WebExpressTH",
+      "url": "https://www.webexpressth.com"
+    }
+  }
+  </script>
+</head>
+
+<body>
+  <div id="page-loader" aria-hidden="true">
+    <div class="page-loader__ring"></div>
+    <span class="page-loader__wordmark">WebExpressTH</span>
+  </div>
+
+  <nav></nav>
+
+  <main>
+
+    <!-- ── Article Header ────────────────────────────────── -->
+    <section class="blog-post-hero">
+      <div class="container blog-post-hero-inner">
+        <a class="blog-post-back" href="blog.html">← กลับไปหน้าบทความ</a>
+        <div class="blog-post-meta">
+          <span class="blog-card-category">ความปลอดภัย</span>
+          <time class="blog-card-date" datetime="2026-07-29">29 กรกฎาคม 2569</time>
+          <span class="blog-card-readtime">อ่าน 5 นาที</span>
+        </div>
+        <h1 class="blog-post-title">SSL/HTTPS คืออะไร ทำไมเว็บไซต์ทุกเจ้าต้องมี</h1>
+        <p class="blog-post-lead">
+          เว็บที่ขึ้นต้นด้วย <code>http://</code> แทน <code>https://</code> จะถูก Chrome และ Firefox แสดงคำเตือน "Not Secure" ทันที ซึ่งทำลาย trust ของผู้เข้าชมอย่างรุนแรง แต่ SSL คืออะไรกันแน่ และทำไมถึงสำคัญมากขนาดนี้?
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Article Body ───────────────────────────────────── -->
+    <article class="blog-post-body">
+      <div class="container blog-post-container">
+
+        <h2>SSL และ HTTPS คืออะไร?</h2>
+        <p>
+          <strong>SSL (Secure Sockets Layer)</strong> — ปัจจุบันใช้ TLS (Transport Layer Security) ซึ่งเป็นรุ่นที่ปลอดภัยกว่า — คือ protocol ที่เข้ารหัสข้อมูลที่ส่งระหว่าง browser ของผู้ใช้งานกับ server ของเว็บไซต์
+        </p>
+        <p>
+          เมื่อเว็บมี SSL จะเปลี่ยน URL จาก <code>http://</code> เป็น <code>https://</code> และแสดง icon กุญแจในช่อง address bar ของ browser หมายความว่าข้อมูลที่ส่งผ่านการเชื่อมต่อนี้ถูกเข้ารหัสและป้องกันจากบุคคลที่สามที่อาจดักฟัง
+        </p>
+
+        <h2>ทำไม SSL ถึงสำคัญ?</h2>
+
+        <h3>1. ปกป้องข้อมูลผู้ใช้งาน</h3>
+        <p>
+          โดยไม่มี SSL ข้อมูลที่ผู้ใช้งานกรอกในเว็บ เช่น รหัสผ่าน, ข้อมูลบัตรเครดิต, ข้อมูลส่วนตัว ถูกส่งแบบ plain text ที่ใครก็อ่านได้ถ้าดักฟัง network traffic ได้ (Man-in-the-Middle attack)
+        </p>
+
+        <h3>2. สร้าง Trust กับผู้เข้าชม</h3>
+        <p>
+          Chrome และ Firefox แสดงคำเตือน "Not Secure" อย่างชัดเจนสำหรับเว็บที่ไม่มี HTTPS ผู้เข้าชมส่วนใหญ่จะออกจากเว็บทันทีเมื่อเห็นคำเตือนนี้ โดยเฉพาะก่อนจะกรอกข้อมูลหรือชำระเงิน
+        </p>
+
+        <h3>3. SEO Ranking</h3>
+        <p>
+          Google ประกาศใช้ HTTPS เป็น ranking signal มาตั้งแต่ปี 2014 เว็บที่มี HTTPS มีโอกาสติดอันดับสูงกว่าเว็บที่ไม่มี เมื่อ content คุณภาพเทียบเท่ากัน
+        </p>
+
+        <h3>4. HTTP/2 และ Performance</h3>
+        <p>
+          HTTP/2 ซึ่งเร็วกว่า HTTP/1.1 มากต้องการ HTTPS เว็บที่มี HTTPS จึงสามารถใช้ HTTP/2 ได้ ทำให้ load time เร็วขึ้นโดยตรง
+        </p>
+
+        <h2>ประเภทของ SSL Certificate</h2>
+        <div class="blog-post-table-wrap">
+          <table class="blog-post-table">
+            <thead>
+              <tr>
+                <th>ประเภท</th>
+                <th>ราคา</th>
+                <th>เหมาะกับ</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="blog-post-table-highlight">
+                <td>Let's Encrypt (DV)</td>
+                <td>ฟรี</td>
+                <td>เว็บไซต์ทั่วไปส่วนใหญ่</td>
+              </tr>
+              <tr>
+                <td>Paid DV SSL</td>
+                <td>500–3,000 บาท/ปี</td>
+                <td>เว็บไซต์ธุรกิจที่ต้องการ support</td>
+              </tr>
+              <tr>
+                <td>OV (Organization Validated)</td>
+                <td>3,000–15,000 บาท/ปี</td>
+                <td>บริษัทที่ต้องการแสดงชื่อองค์กร</td>
+              </tr>
+              <tr>
+                <td>EV (Extended Validation)</td>
+                <td>10,000–50,000 บาท/ปี</td>
+                <td>ธนาคาร, สถาบันการเงิน</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          สำหรับเว็บไซต์ธุรกิจ SME ทั่วไป <strong>Let's Encrypt</strong> ให้ฟรีและเพียงพอ 100% ผู้ให้บริการ hosting อย่าง Netlify, Vercel และ Cloudflare Pages ให้ SSL ฟรีโดยอัตโนมัติ
+        </p>
+
+        <h2>วิธีตรวจสอบว่าเว็บมี SSL หรือยัง</h2>
+        <ol>
+          <li>ดูที่ address bar — URL ควรขึ้นต้นด้วย <code>https://</code></li>
+          <li>คลิก icon กุญแจใน address bar เพื่อดูรายละเอียด certificate</li>
+          <li>ใช้ SSL Checker tool เช่น ssllabs.com/ssltest เพื่อตรวจสอบอย่างละเอียด</li>
+        </ol>
+
+        <h2>Mixed Content คืออะไร?</h2>
+        <p>
+          <strong>Mixed Content</strong> เกิดขึ้นเมื่อเว็บ HTTPS โหลด resource บางอย่าง (รูปภาพ, script, CSS) ผ่าน HTTP แทน HTTPS browser จะบล็อก mixed content ที่ active (script, iframe) และแสดงคำเตือนสำหรับ passive content (รูปภาพ) ซึ่งทำให้ icon กุญแจหายไป
+        </p>
+
+        <div class="blog-post-callout">
+          <p>
+            <strong>สรุป:</strong> SSL/HTTPS เป็น requirement พื้นฐานของเว็บไซต์ยุคนี้ ไม่ใช่ optional ด้วย Let's Encrypt ที่ให้ฟรีและ hosting สมัยใหม่ที่รวม SSL ไว้แล้ว ไม่มีเหตุผลที่เว็บไซต์ใดจะไม่มี HTTPS
+          </p>
+        </div>
+
+        <div class="blog-post-author">
+          <p>เขียนโดย <strong>WebExpressTH</strong> — ทุกเว็บไซต์ที่เราสร้างมาพร้อม HTTPS และ security best practices ตั้งแต่วันแรก</p>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- ── FAQ ───────────────────────────────────────────── -->
+    <section class="blog-faq-section">
+      <div class="container blog-post-container">
+        <h2 class="blog-faq-title">คำถามที่พบบ่อย</h2>
+        <div class="blog-faq-list">
+          <details class="blog-faq-item">
+            <summary>Let's Encrypt ปลอดภัยพอสำหรับเว็บ E-commerce ไหม?</summary>
+            <p>ปลอดภัยครับ Let's Encrypt ให้ DV (Domain Validated) SSL ที่เข้ารหัสข้อมูลได้เทียบเท่า paid certificate ความแตกต่างอยู่ที่ level ของ validation ไม่ใช่ความแข็งแกร่งของการเข้ารหัส</p>
+          </details>
+          <details class="blog-faq-item">
+            <summary>SSL Certificate หมดอายุแล้วต้องทำอย่างไร?</summary>
+            <p>ต้องต่ออายุครับ Let's Encrypt มีอายุ 90 วัน แต่ส่วนใหญ่ต่ออายุอัตโนมัติผ่าน Certbot หรือ hosting provider ถ้า certificate หมดอายุ browser จะแสดงคำเตือนรุนแรงจนผู้ใช้งานไม่สามารถเข้าเว็บได้</p>
+          </details>
+          <details class="blog-faq-item">
+            <summary>เว็บที่มี HTTPS แล้วยังถูก hack ได้ไหม?</summary>
+            <p>ได้ครับ SSL ปกป้องเฉพาะ data in transit (ข้อมูลระหว่างส่ง) ไม่ได้ป้องกันการ hack เว็บไซต์โดยตรง เช่น SQL injection หรือ XSS ความปลอดภัยของเว็บต้องการหลาย layer ของการป้องกัน</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ───────────────────────────────────────────── -->
+    <section class="cta-section" data-component="cta-banner"></section>
+
+  </main>
+
+  <footer></footer>
+
+</body>
+</html>
