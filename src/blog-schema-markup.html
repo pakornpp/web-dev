@@ -51,7 +51,7 @@
             <div class="blog-post-meta">
               <span class="blog-card-category">SEO</span>
               <time class="blog-card-date" datetime="2026-12-02">2 ธ.ค. 2569</time>
-              <span class="blog-card-readtime">อ่าน 6 นาที</span>
+              <span class="blog-card-readtime">อ่าน 9 นาที</span>
             </div>
             <h1 class="blog-post-title">Schema Markup คืออะไร และช่วยให้ธุรกิจไทยเด่นขึ้นบน Google ได้อย่างไร</h1>
             <p class="blog-post-lead">
@@ -87,6 +87,35 @@
 <h2>ควรเริ่มจากหน้าไหนก่อน</h2>
 <p>เริ่มจากหน้าแรก หน้าติดต่อ หน้าบริการหลัก และบทความที่มีทราฟฟิกสูงก่อน จากนั้นค่อยขยายไปยังหน้าประเภทอื่น วิธีนี้ช่วยให้คุณเห็นผลและจัดลำดับความสำคัญได้ดีขึ้น</p>
 
+<h2>ตัวอย่าง schema LocalBusiness สำหรับธุรกิจไทย</h2>
+<p>นี่คือโครงสร้างพื้นฐานของ LocalBusiness schema ที่ธุรกิจบริการในไทยสามารถนำไปปรับใช้ได้:</p>
+<pre><code>{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "ชื่อธุรกิจของคุณ",
+  "url": "https://www.yoursite.com",
+  "telephone": "+66-XX-XXXX-XXXX",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "กรุงเทพมหานคร",
+    "addressCountry": "TH"
+  },
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "priceRange": "฿฿"
+}</code></pre>
+<p>คุณสามารถขยายเพิ่มด้วย <code>areaServed</code>, <code>hasOfferCatalog</code> และ <code>aggregateRating</code> เพื่อให้ข้อมูลครบถ้วนยิ่งขึ้น</p>
+
+<h2>วิธีทดสอบว่า schema ถูกต้องไหม</h2>
+<p>หลังใส่ schema แล้วควรตรวจสอบด้วยเครื่องมือเหล่านี้:</p>
+<ul>
+  <li><strong>Google Rich Results Test</strong> (search.google.com/test/rich-results): ทดสอบว่า Google อ่าน schema ได้ไหมและหน้าเว็บมีสิทธิ์แสดง rich results ประเภทใดบ้าง</li>
+  <li><strong>Schema.org Validator</strong> (validator.schema.org): ตรวจสอบว่า structure ถูกต้องตาม standard</li>
+  <li><strong>Google Search Console:</strong> ดูรายงาน Enhancements เพื่อเช็กว่า Google ตรวจพบ schema ของคุณและมี error หรือ warning อะไรบ้าง</li>
+</ul>
+
+<h2>ข้อผิดพลาดที่พบบ่อยและควรหลีกเลี่ยง</h2>
+<p>นอกจากข้อมูลที่ไม่ตรงกับเนื้อหาจริงแล้ว ยังมีข้อผิดพลาดที่พบบ่อยในเว็บไซต์ธุรกิจไทย ได้แก่: ใส่ schema ซ้ำบนหน้าเดียวกันหลายครั้ง, ใช้ type ผิดประเภท เช่น ใช้ Article กับหน้าบริการแทน Service, หรือไม่อัปเดต schema หลังเปลี่ยนข้อมูลธุรกิจ ควรรีวิว schema ทุกครั้งที่มีการเปลี่ยนแปลงข้อมูลสำคัญบนเว็บไซต์</p>
+
 
             <div class="blog-post-callout">
               <p>
@@ -117,6 +146,14 @@
 <details class="blog-faq-item">
   <summary>Schema กับ SEO On-page เป็นอย่างเดียวกันไหม?</summary>
   <p>ไม่เหมือนกันครับ SEO On-page คือการปรับเนื้อหา โครงสร้าง และ metadata ส่วน schema คือข้อมูลโครงสร้างเพิ่มเติมที่ช่วยให้ search engine เข้าใจหน้าเว็บได้ลึกขึ้น</p>
+</details>
+<details class="blog-faq-item">
+  <summary>ต้องเขียน JSON-LD เองหรือมีเครื่องมือช่วยได้ไหม?</summary>
+  <p>มีเครื่องมือช่วยได้ครับ เช่น Merkle Schema Markup Generator หรือ plugin ของ WordPress เช่น Yoast SEO หรือ Rank Math ที่สร้าง schema อัตโนมัติจากการตั้งค่า ช่วยให้ไม่ต้องเขียน JSON-LD เองทั้งหมด</p>
+</details>
+<details class="blog-faq-item">
+  <summary>ใส่ schema ไปแล้วแต่ยังไม่ขึ้น rich results ผิดปกติไหม?</summary>
+  <p>ปกติครับ Google ไม่ได้รับประกันว่าจะแสดง rich results ทุกครั้ง แม้ schema ถูกต้อง ขึ้นอยู่กับ content quality, ความน่าเชื่อถือของโดเมน และบริบทของการค้นหาด้วย อาจต้องรออีกหลายสัปดาห์หลัง index ใหม่</p>
 </details>
 
             </div>
